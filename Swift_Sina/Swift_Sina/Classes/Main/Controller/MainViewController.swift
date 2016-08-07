@@ -13,16 +13,21 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let childVC = HomeViewController()
-        childVC.view.backgroundColor=UIColor .redColor()
-        childVC.title="首页"
-        childVC.tabBarItem.image=UIImage(named: "tabbar_home")
-        childVC.tabBarItem.selectedImage=UIImage(named: "tabbar_home_highlighted")
-        let childNav = UINavigationController(rootViewController: childVC)
-        addChildViewController(childNav)
+        addChildViewController(HomeViewController(), title: "首页", imageName: "tabbar_home")
+        addChildViewController(MessageViewController(), title: "消息", imageName: "tabbar_message_center")
+        addChildViewController(DiscoverViewController(), title: "发现", imageName: "tabbar_discover")
+        addChildViewController(ProfileViewController(), title: "我", imageName: "tabbar_profile")
+        
     }
     
     func addChildViewController(childVC:UIViewController,title:String,imageName:String)  {
+        
+        childVC.view.backgroundColor=UIColor .redColor()
+        childVC.title=title
+        childVC.tabBarItem.image=UIImage(named:imageName)
+        childVC.tabBarItem.selectedImage=UIImage(named: imageName+"_highlighted")
+        let childNav = UINavigationController(rootViewController: childVC)
+        addChildViewController(childNav)
         
     }
 

@@ -16,6 +16,9 @@
 		CF4091101D572C4100D4FCC2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40910F1D572C4100D4FCC2 /* MainViewController.swift */; };
 		CF4091171D572DEF00D4FCC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4091161D572DEF00D4FCC2 /* HomeViewController.swift */; };
 		CF4091191D57307900D4FCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4091181D57307900D4FCC2 /* Assets.xcassets */; };
+		CF40911B1D5734C700D4FCC2 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */; };
+		CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */; };
+		CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		CF40910F1D572C4100D4FCC2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CF4091161D572DEF00D4FCC2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CF4091181D57307900D4FCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +236,7 @@
 		CF4091041D5720C900D4FCC2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +268,7 @@
 		CF4091081D5720C900D4FCC2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +321,7 @@
 		CF4091111D572D2700D4FCC2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -468,7 +477,10 @@
 				CF4091101D572C4100D4FCC2 /* MainViewController.swift in Sources */,
 				CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */,
 				CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */,
+				CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */,
+				CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */,
 				CF4091171D572DEF00D4FCC2 /* HomeViewController.swift in Sources */,
+				CF40911B1D5734C700D4FCC2 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
