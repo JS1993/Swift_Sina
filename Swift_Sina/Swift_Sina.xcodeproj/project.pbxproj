@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */; };
-		CF4090C51D56DA4000D4FCC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C41D56DA4000D4FCC2 /* ViewController.swift */; };
 		CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4090C61D56DA4000D4FCC2 /* Main.storyboard */; };
 		CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C91D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld */; };
 		CF4090CD1D56DA4000D4FCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4090CC1D56DA4000D4FCC2 /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		CF4090BF1D56DA4000D4FCC2 /* Swift_Sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF4090C41D56DA4000D4FCC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF4090C71D56DA4000D4FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF4090CA1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swift_Sina.xcdatamodel; sourceTree = "<group>"; };
 		CF4090CC1D56DA4000D4FCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,12 +98,12 @@
 			isa = PBXGroup;
 			children = (
 				CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */,
-				CF4090C41D56DA4000D4FCC2 /* ViewController.swift */,
 				CF4090C61D56DA4000D4FCC2 /* Main.storyboard */,
 				CF4090CC1D56DA4000D4FCC2 /* Assets.xcassets */,
 				CF4090CE1D56DA4000D4FCC2 /* LaunchScreen.storyboard */,
 				CF4090D11D56DA4000D4FCC2 /* Info.plist */,
 				CF4090C91D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld */,
+				CF4090F91D5720C900D4FCC2 /* Classes */,
 			);
 			path = Swift_Sina;
 			sourceTree = "<group>";
@@ -126,6 +124,181 @@
 				CF4090E71D56DA4000D4FCC2 /* Info.plist */,
 			);
 			path = Swift_SinaUITests;
+			sourceTree = "<group>";
+		};
+		CF4090F91D5720C900D4FCC2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CF4090FA1D5720C900D4FCC2 /* Discover */,
+				CF4090FB1D5720C900D4FCC2 /* Home */,
+				CF4090FF1D5720C900D4FCC2 /* Main */,
+				CF4091031D5720C900D4FCC2 /* Message */,
+				CF4091071D5720C900D4FCC2 /* Profile */,
+				CF40910B1D5720C900D4FCC2 /* Publish */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CF4090FA1D5720C900D4FCC2 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		CF4090FB1D5720C900D4FCC2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CF4090FC1D5720C900D4FCC2 /* Controller */,
+				CF4090FD1D5720C900D4FCC2 /* Model */,
+				CF4090FE1D5720C900D4FCC2 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CF4090FC1D5720C900D4FCC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF4090FD1D5720C900D4FCC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF4090FE1D5720C900D4FCC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF4090FF1D5720C900D4FCC2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CF4091001D5720C900D4FCC2 /* Controller */,
+				CF4091011D5720C900D4FCC2 /* Model */,
+				CF4091021D5720C900D4FCC2 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CF4091001D5720C900D4FCC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF4091011D5720C900D4FCC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF4091021D5720C900D4FCC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF4091031D5720C900D4FCC2 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				CF4091041D5720C900D4FCC2 /* Controller */,
+				CF4091051D5720C900D4FCC2 /* Model */,
+				CF4091061D5720C900D4FCC2 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		CF4091041D5720C900D4FCC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF4091051D5720C900D4FCC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF4091061D5720C900D4FCC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF4091071D5720C900D4FCC2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CF4091081D5720C900D4FCC2 /* Controller */,
+				CF4091091D5720C900D4FCC2 /* Model */,
+				CF40910A1D5720C900D4FCC2 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CF4091081D5720C900D4FCC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF4091091D5720C900D4FCC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF40910A1D5720C900D4FCC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF40910B1D5720C900D4FCC2 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				CF40910C1D5720C900D4FCC2 /* Controller */,
+				CF40910D1D5720C900D4FCC2 /* Model */,
+				CF40910E1D5720C900D4FCC2 /* View */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		CF40910C1D5720C900D4FCC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF40910D1D5720C900D4FCC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF40910E1D5720C900D4FCC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +435,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF4090C51D56DA4000D4FCC2 /* ViewController.swift in Sources */,
 				CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */,
 				CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */,
 			);
