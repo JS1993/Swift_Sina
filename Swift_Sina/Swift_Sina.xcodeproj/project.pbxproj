@@ -10,10 +10,12 @@
 		CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */; };
 		CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4090C61D56DA4000D4FCC2 /* Main.storyboard */; };
 		CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C91D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld */; };
-		CF4090CD1D56DA4000D4FCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4090CC1D56DA4000D4FCC2 /* Assets.xcassets */; };
 		CF4090D01D56DA4000D4FCC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4090CE1D56DA4000D4FCC2 /* LaunchScreen.storyboard */; };
 		CF4090DB1D56DA4000D4FCC2 /* Swift_SinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090DA1D56DA4000D4FCC2 /* Swift_SinaTests.swift */; };
 		CF4090E61D56DA4000D4FCC2 /* Swift_SinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090E51D56DA4000D4FCC2 /* Swift_SinaUITests.swift */; };
+		CF4091101D572C4100D4FCC2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40910F1D572C4100D4FCC2 /* MainViewController.swift */; };
+		CF4091171D572DEF00D4FCC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4091161D572DEF00D4FCC2 /* HomeViewController.swift */; };
+		CF4091191D57307900D4FCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF4091181D57307900D4FCC2 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4090C71D56DA4000D4FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF4090CA1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swift_Sina.xcdatamodel; sourceTree = "<group>"; };
-		CF4090CC1D56DA4000D4FCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF4090CF1D56DA4000D4FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF4090D11D56DA4000D4FCC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF4090D61D56DA4000D4FCC2 /* Swift_SinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift_SinaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +48,9 @@
 		CF4090E11D56DA4000D4FCC2 /* Swift_SinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift_SinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4090E51D56DA4000D4FCC2 /* Swift_SinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_SinaUITests.swift; sourceTree = "<group>"; };
 		CF4090E71D56DA4000D4FCC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF40910F1D572C4100D4FCC2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CF4091161D572DEF00D4FCC2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CF4091181D57307900D4FCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,13 +101,13 @@
 		CF4090C11D56DA4000D4FCC2 /* Swift_Sina */ = {
 			isa = PBXGroup;
 			children = (
+				CF4090F91D5720C900D4FCC2 /* Classes */,
+				CF4091181D57307900D4FCC2 /* Assets.xcassets */,
 				CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */,
 				CF4090C61D56DA4000D4FCC2 /* Main.storyboard */,
-				CF4090CC1D56DA4000D4FCC2 /* Assets.xcassets */,
 				CF4090CE1D56DA4000D4FCC2 /* LaunchScreen.storyboard */,
 				CF4090D11D56DA4000D4FCC2 /* Info.plist */,
 				CF4090C91D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld */,
-				CF4090F91D5720C900D4FCC2 /* Classes */,
 			);
 			path = Swift_Sina;
 			sourceTree = "<group>";
@@ -129,10 +133,10 @@
 		CF4090F91D5720C900D4FCC2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CF4090FA1D5720C900D4FCC2 /* Discover */,
-				CF4090FB1D5720C900D4FCC2 /* Home */,
 				CF4090FF1D5720C900D4FCC2 /* Main */,
+				CF4090FB1D5720C900D4FCC2 /* Home */,
 				CF4091031D5720C900D4FCC2 /* Message */,
+				CF4090FA1D5720C900D4FCC2 /* Discover */,
 				CF4091071D5720C900D4FCC2 /* Profile */,
 				CF40910B1D5720C900D4FCC2 /* Publish */,
 			);
@@ -142,6 +146,9 @@
 		CF4090FA1D5720C900D4FCC2 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				CF4091111D572D2700D4FCC2 /* Controller */,
+				CF4091131D572D2700D4FCC2 /* Model */,
+				CF4091141D572D2700D4FCC2 /* View */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -159,6 +166,7 @@
 		CF4090FC1D5720C900D4FCC2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF4091161D572DEF00D4FCC2 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 		CF4091001D5720C900D4FCC2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF40910F1D572C4100D4FCC2 /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +304,27 @@
 			sourceTree = "<group>";
 		};
 		CF40910E1D5720C900D4FCC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF4091111D572D2700D4FCC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF4091131D572D2700D4FCC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF4091141D572D2700D4FCC2 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -409,7 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF4090D01D56DA4000D4FCC2 /* LaunchScreen.storyboard in Resources */,
-				CF4090CD1D56DA4000D4FCC2 /* Assets.xcassets in Resources */,
+				CF4091191D57307900D4FCC2 /* Assets.xcassets in Resources */,
 				CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,8 +465,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4091101D572C4100D4FCC2 /* MainViewController.swift in Sources */,
 				CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */,
 				CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */,
+				CF4091171D572DEF00D4FCC2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,7 +610,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Swift_Sina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangsu.www.Swift-Sina";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -589,7 +623,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = Swift_Sina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangsu.www.Swift-Sina";
 				PRODUCT_NAME = "$(TARGET_NAME)";
