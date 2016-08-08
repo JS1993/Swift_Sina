@@ -46,11 +46,13 @@ extension HomeViewController{
 extension HomeViewController{
     
     @objc private func titleBtnClicked(){
-        if titleBtn.selected {
-            titleBtn.selected=false
-        }else{
-            titleBtn.selected=true
-        }
+        
+        titleBtn.selected = !titleBtn.selected
+        
+        let popoverVC = JSPopoverViewController()
+        //设置modal样式为custom则底下的view不会被移除
+        popoverVC.modalPresentationStyle = .Custom
+        presentViewController(popoverVC, animated: true, completion: nil)
         
         print("点击了标题按钮")
     }
