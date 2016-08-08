@@ -16,4 +16,29 @@ class VisitorView: UIView {
         
     }
     
+    //MARK: -控件属性
+    @IBOutlet var rotationView: UIImageView!
+    @IBOutlet var iconView: UIImageView!
+    @IBOutlet var tipLabel: UILabel!
+    
+    //MARK: -设置属性
+    func setUpVisitorViewInfo(iconName:String,title:String)  {
+        rotationView.hidden=true
+        iconView.image=UIImage(named: iconName)
+        tipLabel.text=title
+    }
+    
+    //MARK: -设置动画
+    func addAnimation() {
+        
+        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotationAnimation.fromValue=0
+        rotationAnimation.toValue=M_PI*2
+        rotationAnimation.repeatCount=MAXFLOAT
+        rotationAnimation.duration=5.0
+        rotationAnimation.removedOnCompletion=false
+        
+        rotationView.layer.addAnimation(rotationAnimation, forKey: nil)
+    }
+    
 }

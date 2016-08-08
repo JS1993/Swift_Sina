@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UITableViewController {
     
     //MARK: -懒加载属性
-    private lazy var visitorView: VisitorView = VisitorView.createVisitorView()
+    lazy var visitorView: VisitorView = VisitorView.createVisitorView()
     
     //MARK: -定义变量
     var isLogin : Bool = false

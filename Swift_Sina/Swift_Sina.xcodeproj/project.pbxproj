@@ -194,7 +194,6 @@
 				CF4090FF1D5720C900D4FCC2 /* Main */,
 				CF4090FB1D5720C900D4FCC2 /* Home */,
 				CF4091031D5720C900D4FCC2 /* Message */,
-				CF4090FA1D5720C900D4FCC2 /* Discover */,
 				CF4091071D5720C900D4FCC2 /* Profile */,
 				CF40910B1D5720C900D4FCC2 /* Publish */,
 				CF1E9FB31D5821B5000E6D56 /* Tools */,
@@ -208,7 +207,8 @@
 				CF1E9FAE1D580F5D000E6D56 /* Discover.storyboard */,
 				CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */,
 			);
-			path = Discover;
+			name = Discover;
+			path = ../Discover;
 			sourceTree = "<group>";
 		};
 		CF4090FB1D5720C900D4FCC2 /* Home */ = {
@@ -235,6 +235,7 @@
 			children = (
 				CF1E9FA71D580E78000E6D56 /* Message.storyboard */,
 				CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */,
+				CF4090FA1D5720C900D4FCC2 /* Discover */,
 			);
 			path = Message;
 			sourceTree = "<group>";
