@@ -16,6 +16,7 @@
 		CF1E9FBC1D583799000E6D56 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9FBB1D583799000E6D56 /* BaseViewController.swift */; };
 		CF1E9FBE1D583A3D000E6D56 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9FBD1D583A3D000E6D56 /* VisitorView.swift */; };
 		CF1E9FC01D583A45000E6D56 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FBF1D583A45000E6D56 /* VisitorView.xib */; };
+		CF1E9FC21D58830B000E6D56 /* UIBarButtonItem-JSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9FC11D58830B000E6D56 /* UIBarButtonItem-JSExtension.swift */; };
 		CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */; };
 		CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4090C61D56DA4000D4FCC2 /* Main.storyboard */; };
 		CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C91D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld */; };
@@ -57,6 +58,7 @@
 		CF1E9FBB1D583799000E6D56 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CF1E9FBD1D583A3D000E6D56 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		CF1E9FBF1D583A45000E6D56 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
+		CF1E9FC11D58830B000E6D56 /* UIBarButtonItem-JSExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-JSExtension.swift"; sourceTree = "<group>"; };
 		CF4090BF1D56DA4000D4FCC2 /* Swift_Sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4090C71D56DA4000D4FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				CF1E9FB51D582248000E6D56 /* UIButton-JSExtension.swift */,
+				CF1E9FC11D58830B000E6D56 /* UIBarButtonItem-JSExtension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				CF1E9FBC1D583799000E6D56 /* BaseViewController.swift in Sources */,
 				CF4091171D572DEF00D4FCC2 /* HomeViewController.swift in Sources */,
 				CF1E9FBE1D583A3D000E6D56 /* VisitorView.swift in Sources */,
+				CF1E9FC21D58830B000E6D56 /* UIBarButtonItem-JSExtension.swift in Sources */,
 				CF1E9FB61D582248000E6D56 /* UIButton-JSExtension.swift in Sources */,
 				CF40911B1D5734C700D4FCC2 /* MessageViewController.swift in Sources */,
 			);
