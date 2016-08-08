@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1E9FA61D580E56000E6D56 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FA41D580E56000E6D56 /* Home.storyboard */; };
+		CF1E9FA81D580E78000E6D56 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FA71D580E78000E6D56 /* Message.storyboard */; };
+		CF1E9FAD1D580F40000E6D56 /* Publish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FAC1D580F40000E6D56 /* Publish.storyboard */; };
+		CF1E9FB01D580F5D000E6D56 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FAE1D580F5D000E6D56 /* Discover.storyboard */; };
+		CF1E9FB21D580F83000E6D56 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FB11D580F83000E6D56 /* Profile.storyboard */; };
 		CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */; };
 		CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4090C61D56DA4000D4FCC2 /* Main.storyboard */; };
 		CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C91D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld */; };
@@ -39,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF1E9FA51D580E56000E6D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		CF1E9FA71D580E78000E6D56 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
+		CF1E9FAC1D580F40000E6D56 /* Publish.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Publish.storyboard; path = ../../Publish.storyboard; sourceTree = "<group>"; };
+		CF1E9FAF1D580F5D000E6D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
+		CF1E9FB11D580F83000E6D56 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../Profile.storyboard; sourceTree = "<group>"; };
 		CF4090BF1D56DA4000D4FCC2 /* Swift_Sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4090C71D56DA4000D4FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,6 +162,7 @@
 		CF4090FA1D5720C900D4FCC2 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E9FAE1D580F5D000E6D56 /* Discover.storyboard */,
 				CF4091111D572D2700D4FCC2 /* Controller */,
 				CF4091131D572D2700D4FCC2 /* Model */,
 				CF4091141D572D2700D4FCC2 /* View */,
@@ -162,6 +173,7 @@
 		CF4090FB1D5720C900D4FCC2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E9FA41D580E56000E6D56 /* Home.storyboard */,
 				CF4090FC1D5720C900D4FCC2 /* Controller */,
 				CF4090FD1D5720C900D4FCC2 /* Model */,
 				CF4090FE1D5720C900D4FCC2 /* View */,
@@ -226,6 +238,7 @@
 		CF4091031D5720C900D4FCC2 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E9FA71D580E78000E6D56 /* Message.storyboard */,
 				CF4091041D5720C900D4FCC2 /* Controller */,
 				CF4091051D5720C900D4FCC2 /* Model */,
 				CF4091061D5720C900D4FCC2 /* View */,
@@ -258,6 +271,7 @@
 		CF4091071D5720C900D4FCC2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E9FB11D580F83000E6D56 /* Profile.storyboard */,
 				CF4091081D5720C900D4FCC2 /* Controller */,
 				CF4091091D5720C900D4FCC2 /* Model */,
 				CF40910A1D5720C900D4FCC2 /* View */,
@@ -290,6 +304,7 @@
 		CF40910B1D5720C900D4FCC2 /* Publish */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E9FAC1D580F40000E6D56 /* Publish.storyboard */,
 				CF40910C1D5720C900D4FCC2 /* Controller */,
 				CF40910D1D5720C900D4FCC2 /* Model */,
 				CF40910E1D5720C900D4FCC2 /* View */,
@@ -449,7 +464,12 @@
 			files = (
 				CF4090D01D56DA4000D4FCC2 /* LaunchScreen.storyboard in Resources */,
 				CF4091191D57307900D4FCC2 /* Assets.xcassets in Resources */,
+				CF1E9FB21D580F83000E6D56 /* Profile.storyboard in Resources */,
+				CF1E9FAD1D580F40000E6D56 /* Publish.storyboard in Resources */,
+				CF1E9FA81D580E78000E6D56 /* Message.storyboard in Resources */,
 				CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */,
+				CF1E9FB01D580F5D000E6D56 /* Discover.storyboard in Resources */,
+				CF1E9FA61D580E56000E6D56 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +536,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CF1E9FA41D580E56000E6D56 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF1E9FA51D580E56000E6D56 /* Base */,
+			);
+			name = Home.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		CF1E9FAE1D580F5D000E6D56 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF1E9FAF1D580F5D000E6D56 /* Base */,
+			);
+			name = Discover.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		CF4090C61D56DA4000D4FCC2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -709,6 +747,7 @@
 				CF4090EC1D56DA4000D4FCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF4090ED1D56DA4000D4FCC2 /* Build configuration list for PBXNativeTarget "Swift_SinaTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +756,7 @@
 				CF4090EF1D56DA4000D4FCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF4090F01D56DA4000D4FCC2 /* Build configuration list for PBXNativeTarget "Swift_SinaUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +765,7 @@
 				CF4090F21D56DA4000D4FCC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

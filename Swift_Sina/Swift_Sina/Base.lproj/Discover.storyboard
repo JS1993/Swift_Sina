@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fe0-3e-ZOh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--发现-->
+        <scene sceneID="pBp-Wd-alN">
+            <objects>
+                <tableViewController id="1wE-ph-AaY" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="m6X-be-ni6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="1wE-ph-AaY" id="ebz-o7-l9v"/>
+                            <outlet property="delegate" destination="1wE-ph-AaY" id="pv7-NN-0dr"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="发现" image="tabbar_discover" selectedImage="tabbar_discover_highlighted" id="ej9-rP-0nx"/>
+                    <navigationItem key="navigationItem" title="发现" id="Hcr-4c-iX1"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s28-FC-eQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.5" y="676.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="HXo-l2-Tys">
+            <objects>
+                <navigationController id="Fe0-3e-ZOh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="v1W-C8-UBo"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L8y-u9-3YG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1wE-ph-AaY" kind="relationship" relationship="rootViewController" id="hh5-Ta-dBO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xct-xf-5MM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481.5" y="690.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_discover" width="30" height="30"/>
+        <image name="tabbar_discover_highlighted" width="30" height="30"/>
+    </resources>
+</document>

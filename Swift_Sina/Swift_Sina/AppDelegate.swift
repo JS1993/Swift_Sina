@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         UITabBar.appearance().tintColor=UIColor.orangeColor()
-        
-        window=UIWindow()
-        window?.frame=UIScreen .mainScreen().bounds
-        window?.rootViewController=MainViewController()
-        window?.makeKeyAndVisible()
+//
+//        window=UIWindow()
+//        window?.frame=UIScreen .mainScreen().bounds
+//        window?.rootViewController=MainViewController()
+//        window?.makeKeyAndVisible()
         return true
     }
 
