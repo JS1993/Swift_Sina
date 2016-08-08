@@ -7,7 +7,7 @@
         <!--消息-->
         <scene sceneID="eAJ-BX-Dxg">
             <objects>
-                <tableViewController id="7p9-WM-gtq" sceneMemberID="viewController">
+                <tableViewController id="7p9-WM-gtq" customClass="MessageViewController" customModule="Swift_Sina" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QVz-p3-EOI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

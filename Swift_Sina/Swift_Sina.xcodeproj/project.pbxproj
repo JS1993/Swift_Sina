@@ -13,6 +13,9 @@
 		CF1E9FB01D580F5D000E6D56 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FAE1D580F5D000E6D56 /* Discover.storyboard */; };
 		CF1E9FB21D580F83000E6D56 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FB11D580F83000E6D56 /* Profile.storyboard */; };
 		CF1E9FB61D582248000E6D56 /* UIButton-JSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9FB51D582248000E6D56 /* UIButton-JSExtension.swift */; };
+		CF1E9FBC1D583799000E6D56 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9FBB1D583799000E6D56 /* BaseViewController.swift */; };
+		CF1E9FBE1D583A3D000E6D56 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9FBD1D583A3D000E6D56 /* VisitorView.swift */; };
+		CF1E9FC01D583A45000E6D56 /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FBF1D583A45000E6D56 /* VisitorView.xib */; };
 		CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */; };
 		CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4090C61D56DA4000D4FCC2 /* Main.storyboard */; };
 		CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C91D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld */; };
@@ -51,6 +54,9 @@
 		CF1E9FAF1D580F5D000E6D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		CF1E9FB11D580F83000E6D56 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../../Profile.storyboard; sourceTree = "<group>"; };
 		CF1E9FB51D582248000E6D56 /* UIButton-JSExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-JSExtension.swift"; sourceTree = "<group>"; };
+		CF1E9FBB1D583799000E6D56 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CF1E9FBD1D583A3D000E6D56 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		CF1E9FBF1D583A45000E6D56 /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		CF4090BF1D56DA4000D4FCC2 /* Swift_Sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4090C71D56DA4000D4FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +117,23 @@
 				CF1E9FB51D582248000E6D56 /* UIButton-JSExtension.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		CF1E9FB71D58372A000E6D56 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CF1E9FB81D58373B000E6D56 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E9FBB1D583799000E6D56 /* BaseViewController.swift */,
+				CF1E9FBD1D583A3D000E6D56 /* VisitorView.swift */,
+				CF1E9FBF1D583A45000E6D56 /* VisitorView.xib */,
+			);
+			path = Visitor;
 			sourceTree = "<group>";
 		};
 		CF4090B61D56DA4000D4FCC2 = {
@@ -200,6 +223,8 @@
 		CF4090FF1D5720C900D4FCC2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CF1E9FB81D58373B000E6D56 /* Visitor */,
+				CF1E9FB71D58372A000E6D56 /* Resource */,
 				CF40910F1D572C4100D4FCC2 /* MainViewController.swift */,
 			);
 			path = Main;
@@ -346,6 +371,7 @@
 				CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */,
 				CF1E9FB01D580F5D000E6D56 /* Discover.storyboard in Resources */,
 				CF1E9FA61D580E56000E6D56 /* Home.storyboard in Resources */,
+				CF1E9FC01D583A45000E6D56 /* VisitorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +401,9 @@
 				CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */,
 				CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */,
 				CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */,
+				CF1E9FBC1D583799000E6D56 /* BaseViewController.swift in Sources */,
 				CF4091171D572DEF00D4FCC2 /* HomeViewController.swift in Sources */,
+				CF1E9FBE1D583A3D000E6D56 /* VisitorView.swift in Sources */,
 				CF1E9FB61D582248000E6D56 /* UIButton-JSExtension.swift in Sources */,
 				CF40911B1D5734C700D4FCC2 /* MessageViewController.swift in Sources */,
 			);
