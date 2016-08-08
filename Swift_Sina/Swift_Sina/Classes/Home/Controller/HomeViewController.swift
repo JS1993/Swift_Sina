@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
+    
+    private lazy var titleBtn:JSRightImageButton = JSRightImageButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +23,35 @@ class HomeViewController: BaseViewController {
         
         setUpNav()
     }
-    
-
-
 }
 
-// MARK: - 设置UI界面
+// MARK: - 设置导航栏UI
 extension HomeViewController{
  
     private func setUpNav(){
         self.navigationItem.leftBarButtonItem=UIBarButtonItem(imageName: "navigationbar_friendattention")
         self.navigationItem.rightBarButtonItem=UIBarButtonItem(imageName: "navigationbar_pop")
+        
+        titleBtn.setImage(UIImage(named: "navigationbar_arrow_down"), forState: .Normal)
+        titleBtn.setImage(UIImage(named: "navigationbar_arrow_up"), forState: .Selected)
+        titleBtn.setTitle("jiangsu", forState: .Normal)
+        titleBtn.sizeToFit()
+        titleBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        titleBtn.addTarget(self, action: #selector(HomeViewController.titleBtnClicked), forControlEvents: .TouchUpInside)
+        self.navigationItem.titleView=titleBtn
+    }
+}
+
+// MARK: - 监听titleBtn的点击事件
+extension HomeViewController{
+    
+    @objc private func titleBtnClicked(){
+        if titleBtn.selected {
+            titleBtn.selected=false
+        }else{
+            titleBtn.selected=true
+        }
+        
+        print("点击了标题按钮")
     }
 }
