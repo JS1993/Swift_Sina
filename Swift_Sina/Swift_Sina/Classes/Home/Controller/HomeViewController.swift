@@ -15,6 +15,8 @@ class HomeViewController: BaseViewController {
 
         visitorView.addAnimation()
     }
+    
+    
 
     // MARK: - Table view data source
 

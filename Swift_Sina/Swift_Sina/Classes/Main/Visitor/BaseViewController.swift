@@ -24,6 +24,7 @@ class BaseViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpNav()
         
     }
 }
@@ -33,5 +34,26 @@ extension BaseViewController{
     
     private func setUpVisitorView()  {
         view=visitorView
+        visitorView.registerBtn.addTarget(self, action: #selector(BaseViewController.registerAction), forControlEvents: .TouchUpInside)
+        visitorView.loginBtn.addTarget(self, action: #selector(BaseViewController.loginAction), forControlEvents: .TouchUpInside)
     }
+}
+
+// MARK: - 设置导航栏左右item
+extension BaseViewController{
+    
+    private func setUpNav(){
+        navigationItem.leftBarButtonItem=UIBarButtonItem(title: "注册", style: .Plain, target: self, action: #selector(BaseViewController.registerAction))
+        
+        navigationItem.rightBarButtonItem=UIBarButtonItem(title: "登录", style: .Plain, target: self, action: #selector(BaseViewController.loginAction))
+    }
+    
+    @objc private func registerAction() {
+        print("点击了注册")
+    }
+    
+    @objc private func loginAction() {
+        print("点击了登录")
+    }
+    
 }

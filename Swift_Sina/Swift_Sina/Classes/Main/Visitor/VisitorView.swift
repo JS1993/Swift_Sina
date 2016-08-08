@@ -20,6 +20,8 @@ class VisitorView: UIView {
     @IBOutlet var rotationView: UIImageView!
     @IBOutlet var iconView: UIImageView!
     @IBOutlet var tipLabel: UILabel!
+    @IBOutlet var loginBtn: UIButton!
+    @IBOutlet var registerBtn: UIButton!
     
     //MARK: -设置属性
     func setUpVisitorViewInfo(iconName:String,title:String)  {
