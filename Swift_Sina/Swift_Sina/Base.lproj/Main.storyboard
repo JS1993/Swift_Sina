@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="qPK-WO-DmM">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bu-g7-Ycz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController id="m1P-fl-0bk" sceneMemberID="viewController">
+                <tabBarController id="m1P-fl-0bk" customClass="MainViewController" customModule="Swift_Sina" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eSo-d9-kC0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

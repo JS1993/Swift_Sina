@@ -9,14 +9,35 @@
 import UIKit
 
 class MainViewController: UITabBarController {
+    
+    private lazy var publishBtn:UIButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addChildViewController(HomeViewController(), title: "首页", imageName: "tabbar_home")
-        addChildViewController(MessageViewController(), title: "消息", imageName: "tabbar_message_center")
-        addChildViewController(DiscoverViewController(), title: "发现", imageName: "tabbar_discover")
-        addChildViewController(ProfileViewController(), title: "我", imageName: "tabbar_profile")
+        setUpUI()
+        
+    }
+
+}
+
+// MARK: - 设置UI界面
+extension MainViewController{
+    func setUpUI() {
+        publishBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: .Normal)
+        publishBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: .Highlighted)
+        publishBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: .Normal)
+        publishBtn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: .Highlighted)
+        publishBtn.sizeToFit()
+        publishBtn.center=CGPointMake(tabBar.center.x, tabBar.bounds.size.height*0.5)
+        tabBar.addSubview(publishBtn)
+    }
+}
+
+// MARK: - 代码添加子控制器
+extension MainViewController{
+    
+    func addChildVCS() {
         
     }
     
@@ -30,5 +51,4 @@ class MainViewController: UITabBarController {
         addChildViewController(childNav)
         
     }
-
 }
