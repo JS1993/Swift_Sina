@@ -12,7 +12,11 @@ class HomeViewController: BaseViewController {
     
     private lazy var titleBtn:JSRightImageButton = JSRightImageButton()
     
-    private lazy var popoverAnimation:JSPopoverAnimation = JSPopoverAnimation()
+    //注意：在闭包或者函数中出现歧义，使用当前对象的属性或者调用方法，需要加self
+    private lazy var popoverAnimation:JSPopoverAnimation = JSPopoverAnimation {[weak self] (isPresented) in
+        
+        self?.titleBtn.selected = isPresented
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +52,6 @@ extension HomeViewController{
 extension HomeViewController{
     
     @objc private func titleBtnClicked(){
-        
-        titleBtn.selected = !titleBtn.selected
         
         let popoverVC = JSPopoverViewController()
         //设置modal样式为custom则底下的view不会被移除

@@ -14,6 +14,14 @@ class JSPopoverAnimation: NSObject{
     
     var presentFrame :CGRect = CGRectZero
     
+    var animationClassChangedBlock : ((isPresented : Bool)->())?
+    
+    convenience init(animationClassChangedBlock : (isPresented : Bool)->()) {
+        
+        self.init()
+        self.animationClassChangedBlock=animationClassChangedBlock
+    }
+    
 }
 
 // MARK: -自定义转场的代理方法
@@ -34,6 +42,8 @@ extension JSPopoverAnimation:UIViewControllerTransitioningDelegate{
         
         isPresented=true
         
+        animationClassChangedBlock!(isPresented : isPresented)
+        
         return self
     }
     
@@ -41,6 +51,8 @@ extension JSPopoverAnimation:UIViewControllerTransitioningDelegate{
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         isPresented=false
+        
+        animationClassChangedBlock!(isPresented : isPresented)
         
         return self
     }
