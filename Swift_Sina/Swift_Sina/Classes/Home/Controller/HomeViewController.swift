@@ -52,8 +52,17 @@ extension HomeViewController{
         let popoverVC = JSPopoverViewController()
         //设置modal样式为custom则底下的view不会被移除
         popoverVC.modalPresentationStyle = .Custom
+        popoverVC.transitioningDelegate = self
         presentViewController(popoverVC, animated: true, completion: nil)
-        
-        print("点击了标题按钮")
     }
+}
+
+// MARK: -UIViewControllerTransitioningDelegate
+extension HomeViewController:UIViewControllerTransitioningDelegate{
+    
+    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
+        
+        return JSPresentationController(presentedViewController: presented, presentingViewController: presenting)
+    }
+    
 }

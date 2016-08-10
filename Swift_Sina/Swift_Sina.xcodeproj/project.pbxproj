@@ -32,6 +32,7 @@
 		CF40911B1D5734C700D4FCC2 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */; };
 		CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */; };
 		CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */; };
+		CF732AE61D5AAF8700820F66 /* JSPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AE51D5AAF8700820F66 /* JSPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Controller/MessageViewController.swift; sourceTree = "<group>"; };
 		CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverViewController.swift; path = Controller/DiscoverViewController.swift; sourceTree = "<group>"; };
 		CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controller/ProfileViewController.swift; sourceTree = "<group>"; };
+		CF732AE51D5AAF8700820F66 /* JSPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				CF1E9FC81D588BA3000E6D56 /* JSPopoverViewController.swift */,
 				CF1E9FC91D588BA3000E6D56 /* JSPopoverViewController.xib */,
+				CF732AE51D5AAF8700820F66 /* JSPresentationController.swift */,
 			);
 			path = UIPopover;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				CF1E9FBE1D583A3D000E6D56 /* VisitorView.swift in Sources */,
 				CF1E9FC21D58830B000E6D56 /* UIBarButtonItem-JSExtension.swift in Sources */,
 				CF1E9FB61D582248000E6D56 /* UIButton-JSExtension.swift in Sources */,
+				CF732AE61D5AAF8700820F66 /* JSPresentationController.swift in Sources */,
 				CF40911B1D5734C700D4FCC2 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
