@@ -11,8 +11,18 @@ import UIKit
 class UserAccount: NSObject {
 
     var access_token : String?
-    var expires_in : NSTimeInterval = 0.0
+    
+    var expires_in : NSTimeInterval = 0.0 {
+        //属性监听
+        didSet{
+            expires_date = NSDate(timeIntervalSinceNow: expires_in)
+            //let nowDate = NSDate()
+        }
+    }
     var uid : String?
+    
+    //过期日期属性
+    var expires_date : NSDate?
     
     //MARK:-自定义构造函数
     convenience init(dict:[String : AnyObject]) {
@@ -24,6 +34,6 @@ class UserAccount: NSObject {
     
     //MARK: - 重写description属性
     override var description: String{
-        return dictionaryWithValuesForKeys(["access_token","expires_in","uid"]).description
+        return dictionaryWithValuesForKeys(["access_token","expires_date","uid"]).description
     }
 }
