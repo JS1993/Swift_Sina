@@ -113,15 +113,42 @@ extension QAuthViewController : UIWebViewDelegate{
             //3.将字典转成模型对象
             let account = UserAccount(dict: accountDict)
             
-            print(account)
+            //4.请求用户信息
+            self.loadUserInfo(account)
+            
         }
         
         return false
     }
 }
 
-
-
+// MARK: - 加载用户信息
+extension QAuthViewController{
+    private func loadUserInfo(account:UserAccount){
+       
+        guard let accessToken=account.access_token else {
+            return
+        }
+        
+        guard let uid = account.uid else{
+            return
+        }
+        JSNetWorkingTools.shareInstance.loadUserInfo(accessToken, uid: uid) { (result, error) in
+            if error != nil{
+                print(error)
+                return
+            }
+            guard let userInfoDict = result else {
+                return
+            }
+            
+            account.screen_name=userInfoDict["screen_name"] as? String
+            account.profile_image_url=userInfoDict["profile_image_url"] as? String
+            
+            print(account)
+        }
+    }
+}
 
 
 

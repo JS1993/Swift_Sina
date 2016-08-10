@@ -24,6 +24,13 @@ class UserAccount: NSObject {
     //过期日期属性
     var expires_date : NSDate?
     
+    //昵称
+    var screen_name :String?
+    //头像
+    var profile_image_url : String?
+    
+    
+    
     //MARK:-自定义构造函数
     convenience init(dict:[String : AnyObject]) {
         self.init()
@@ -34,6 +41,6 @@ class UserAccount: NSObject {
     
     //MARK: - 重写description属性
     override var description: String{
-        return dictionaryWithValuesForKeys(["access_token","expires_date","uid"]).description
+        return dictionaryWithValuesForKeys(["screen_name","profile_image_url","access_token","expires_date","uid"]).description
     }
 }

@@ -65,3 +65,21 @@ extension JSNetWorkingTools {
         }
     }
 }
+
+// MARK: - 请求用户信息
+extension JSNetWorkingTools{
+   
+    func loadUserInfo(access_token : String, uid : String, finished : (result : [String : AnyObject]?, error : NSError?) ->()) {
+        
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        
+        let parameters = ["access_token":access_token,"uid":uid]
+        
+        request(.GET, urlString: urlString, parameters: parameters) { (result, error) in
+            finished(result:result as? [String : AnyObject], error: error)
+        }
+        
+    }
+    
+}
+
