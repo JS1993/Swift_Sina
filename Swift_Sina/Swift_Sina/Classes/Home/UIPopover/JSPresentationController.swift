@@ -41,7 +41,7 @@ extension JSPresentationController{
 // MARK: - 监听蒙版点击事件
 extension JSPresentationController{
     
-    func coverClick()  {
-        
+    @objc private func coverClick()  {
+        presentedViewController.dismissViewControllerAnimated(true, completion: nil)
     }
 }
