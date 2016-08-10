@@ -55,6 +55,7 @@ extension HomeViewController{
         //设置modal样式为custom则底下的view不会被移除
         popoverVC.modalPresentationStyle = .Custom
         popoverVC.transitioningDelegate = popoverAnimation
+        popoverAnimation.presentFrame=CGRect(x: 100, y: 55, width: 180, height: 250)
         presentViewController(popoverVC, animated: true, completion: nil)
     }
 }

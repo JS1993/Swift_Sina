@@ -10,7 +10,9 @@ import UIKit
 
 class JSPopoverAnimation: NSObject{
     
-        var isPresented:Bool = false;
+    var isPresented:Bool = false;
+    
+    var presentFrame :CGRect = CGRectZero
     
 }
 
@@ -20,7 +22,11 @@ extension JSPopoverAnimation:UIViewControllerTransitioningDelegate{
     //改变弹出view的尺寸
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
         
-        return JSPresentationController(presentedViewController: presented, presentingViewController: presenting)
+        let  presentController = JSPresentationController(presentedViewController: presented, presentingViewController: presenting)
+        
+        presentController.presentFrame=presentFrame
+        
+        return presentController
     }
     
     //改变弹出动画

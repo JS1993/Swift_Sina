@@ -9,13 +9,15 @@
 import UIKit
 
 class JSPresentationController: UIPresentationController {
+    
+    var presentFrame :CGRect = CGRectZero
 
     private lazy var coverView: UIView = UIView()
     
     override func containerViewWillLayoutSubviews() {
         super.containerViewWillLayoutSubviews()
         
-        presentedView()?.frame=CGRectMake(100, 55, 180, 250)
+        presentedView()?.frame=presentFrame
         
         setUpCoverView()
         
