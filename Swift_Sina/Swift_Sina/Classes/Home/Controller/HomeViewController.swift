@@ -57,12 +57,53 @@ extension HomeViewController{
     }
 }
 
-// MARK: -UIViewControllerTransitioningDelegate
+// MARK: -自定义转场的代理方法
 extension HomeViewController:UIViewControllerTransitioningDelegate{
     
+    //改变弹出view的尺寸
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
         
         return JSPresentationController(presentedViewController: presented, presentingViewController: presenting)
     }
     
+    //改变弹出动画
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return self
+    }
+    
+}
+
+// MARK: - 弹出和消失动画的代理方法
+extension HomeViewController:UIViewControllerAnimatedTransitioning{
+    
+    //动画时长
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+        return 0.5
+    }
+    
+    //获取的“转场的上下文”：可以用过转场上下文获取弹出的view和消失的view
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        
+        //1.获取弹出的View
+        let presentedView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+        
+        //2.将弹出的View添加到containerView中
+        transitionContext.containerView()?.addSubview(presentedView)
+        
+        //3.执行动画
+        presentedView.transform=CGAffineTransformMakeScale(1.0, 0.0)
+        
+        //设置锚点
+        presentedView.layer.anchorPoint=CGPoint(x: 0.5, y: 0)
+        
+        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: { 
+            presentedView.transform=CGAffineTransformIdentity
+        }) { (isCompleted:Bool) in
+            
+                //4.告诉转场上下文动画已经完成
+                transitionContext.completeTransition(true)
+        }
+        
+    }
 }
