@@ -39,6 +39,7 @@
 		CF732AED1D5AFECD00820F66 /* QAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF732AEB1D5AFECD00820F66 /* QAuthViewController.xib */; };
 		CF732AEF1D5B028800820F66 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AEE1D5B028800820F66 /* Const.swift */; };
 		CF732AF11D5B2F4A00820F66 /* JSNetWorkingTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */; };
+		CF732AF31D5B334E00820F66 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AF21D5B334E00820F66 /* UserAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		CF732AEB1D5AFECD00820F66 /* QAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QAuthViewController.xib; sourceTree = "<group>"; };
 		CF732AEE1D5B028800820F66 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSNetWorkingTools.swift; sourceTree = "<group>"; };
+		CF732AF21D5B334E00820F66 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		F5871772DD31A7D01F81A26F /* Pods-Swift_Sina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sina/Pods-Swift_Sina.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -323,6 +325,7 @@
 			children = (
 				CF732AEA1D5AFECD00820F66 /* QAuthViewController.swift */,
 				CF732AEB1D5AFECD00820F66 /* QAuthViewController.xib */,
+				CF732AF21D5B334E00820F66 /* UserAccount.swift */,
 			);
 			path = QAuth;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				CF1E9FC61D588713000E6D56 /* JSRightImageButton.swift in Sources */,
 				CF732AE81D5ABE4300820F66 /* JSPopoverAnimation.swift in Sources */,
 				CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */,
+				CF732AF31D5B334E00820F66 /* UserAccount.swift in Sources */,
 				CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */,
 				CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */,
 				CF732AEF1D5B028800820F66 /* Const.swift in Sources */,

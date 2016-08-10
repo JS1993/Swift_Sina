@@ -98,6 +98,22 @@ extension QAuthViewController : UIWebViewDelegate{
         //5.请求accessToken
         JSNetWorkingTools.shareInstance.loadAccessToken(codeStr) { (result, error) in
             
+            //1.错误校验
+            if error != nil{
+                print(error)
+                return
+            }
+            
+            //2.拿到结果
+            guard let accountDict = result else {
+                print("没有获取授权后的数据")
+                return
+            }
+            
+            //3.将字典转成模型对象
+            let account = UserAccount(dict: accountDict)
+            
+            print(account)
         }
         
         return false
