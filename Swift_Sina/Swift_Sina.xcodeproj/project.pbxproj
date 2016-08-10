@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9998549C2F7E3F438C49EF /* Pods_Swift_Sina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8E6B1BB65B37D96F0ED3FF /* Pods_Swift_Sina.framework */; };
 		CF1E9FA61D580E56000E6D56 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FA41D580E56000E6D56 /* Home.storyboard */; };
 		CF1E9FA81D580E78000E6D56 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FA71D580E78000E6D56 /* Message.storyboard */; };
 		CF1E9FAD1D580F40000E6D56 /* Publish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FAC1D580F40000E6D56 /* Publish.storyboard */; };
@@ -34,6 +35,10 @@
 		CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */; };
 		CF732AE61D5AAF8700820F66 /* JSPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AE51D5AAF8700820F66 /* JSPresentationController.swift */; };
 		CF732AE81D5ABE4300820F66 /* JSPopoverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AE71D5ABE4300820F66 /* JSPopoverAnimation.swift */; };
+		CF732AEC1D5AFECD00820F66 /* QAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AEA1D5AFECD00820F66 /* QAuthViewController.swift */; };
+		CF732AED1D5AFECD00820F66 /* QAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF732AEB1D5AFECD00820F66 /* QAuthViewController.xib */; };
+		CF732AEF1D5B028800820F66 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AEE1D5B028800820F66 /* Const.swift */; };
+		CF732AF11D5B2F4A00820F66 /* JSNetWorkingTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A16539A4B52B8D96286FEFB /* Pods-Swift_Sina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sina.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sina/Pods-Swift_Sina.release.xcconfig"; sourceTree = "<group>"; };
+		BD8E6B1BB65B37D96F0ED3FF /* Pods_Swift_Sina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Sina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1E9FA51D580E56000E6D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		CF1E9FA71D580E78000E6D56 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
 		CF1E9FAC1D580F40000E6D56 /* Publish.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Publish.storyboard; path = ../../Publish.storyboard; sourceTree = "<group>"; };
@@ -87,6 +94,11 @@
 		CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controller/ProfileViewController.swift; sourceTree = "<group>"; };
 		CF732AE51D5AAF8700820F66 /* JSPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPresentationController.swift; sourceTree = "<group>"; };
 		CF732AE71D5ABE4300820F66 /* JSPopoverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPopoverAnimation.swift; sourceTree = "<group>"; };
+		CF732AEA1D5AFECD00820F66 /* QAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAuthViewController.swift; sourceTree = "<group>"; };
+		CF732AEB1D5AFECD00820F66 /* QAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QAuthViewController.xib; sourceTree = "<group>"; };
+		CF732AEE1D5B028800820F66 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSNetWorkingTools.swift; sourceTree = "<group>"; };
+		F5871772DD31A7D01F81A26F /* Pods-Swift_Sina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sina/Pods-Swift_Sina.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9998549C2F7E3F438C49EF /* Pods_Swift_Sina.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,10 +127,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3618C10ED7393914843EC04A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5871772DD31A7D01F81A26F /* Pods-Swift_Sina.debug.xcconfig */,
+				7A16539A4B52B8D96286FEFB /* Pods-Swift_Sina.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1DA6EC0E9B07D2A3556372B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD8E6B1BB65B37D96F0ED3FF /* Pods_Swift_Sina.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF1E9FB31D5821B5000E6D56 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				CF1E9FB41D5821B5000E6D56 /* Category */,
+				CF732AEE1D5B028800820F66 /* Const.swift */,
 			);
 			name = Tools;
 			path = Publish/Tools;
@@ -128,6 +159,7 @@
 			children = (
 				CF1E9FB51D582248000E6D56 /* UIButton-JSExtension.swift */,
 				CF1E9FC11D58830B000E6D56 /* UIBarButtonItem-JSExtension.swift */,
+				CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -167,6 +199,8 @@
 				CF4090D91D56DA4000D4FCC2 /* Swift_SinaTests */,
 				CF4090E41D56DA4000D4FCC2 /* Swift_SinaUITests */,
 				CF4090C01D56DA4000D4FCC2 /* Products */,
+				3618C10ED7393914843EC04A /* Pods */,
+				A1DA6EC0E9B07D2A3556372B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -249,6 +283,7 @@
 		CF4090FF1D5720C900D4FCC2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CF732AE91D5AFEB700820F66 /* QAuth */,
 				CF1E9FB81D58373B000E6D56 /* Visitor */,
 				CF1E9FB71D58372A000E6D56 /* Resource */,
 				CF40910F1D572C4100D4FCC2 /* MainViewController.swift */,
@@ -283,6 +318,15 @@
 			path = Publish;
 			sourceTree = "<group>";
 		};
+		CF732AE91D5AFEB700820F66 /* QAuth */ = {
+			isa = PBXGroup;
+			children = (
+				CF732AEA1D5AFECD00820F66 /* QAuthViewController.swift */,
+				CF732AEB1D5AFECD00820F66 /* QAuthViewController.xib */,
+			);
+			path = QAuth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,9 +334,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF4090EA1D56DA4000D4FCC2 /* Build configuration list for PBXNativeTarget "Swift_Sina" */;
 			buildPhases = (
+				74A808601CC91FAACC4E56F2 /* 📦 Check Pods Manifest.lock */,
 				CF4090BB1D56DA4000D4FCC2 /* Sources */,
 				CF4090BC1D56DA4000D4FCC2 /* Frameworks */,
 				CF4090BD1D56DA4000D4FCC2 /* Resources */,
+				384448CC895AC7F78E4AD1E6 /* 📦 Embed Pods Frameworks */,
+				DF25B757E22265E532BFC1A1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,6 +446,7 @@
 				CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */,
 				CF1E9FB01D580F5D000E6D56 /* Discover.storyboard in Resources */,
 				CF1E9FA61D580E56000E6D56 /* Home.storyboard in Resources */,
+				CF732AED1D5AFECD00820F66 /* QAuthViewController.xib in Resources */,
 				CF1E9FC01D583A45000E6D56 /* VisitorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,17 +467,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		384448CC895AC7F78E4AD1E6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_Sina/Pods-Swift_Sina-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74A808601CC91FAACC4E56F2 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF25B757E22265E532BFC1A1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_Sina/Pods-Swift_Sina-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF4090BB1D56DA4000D4FCC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF732AF11D5B2F4A00820F66 /* JSNetWorkingTools.swift in Sources */,
 				CF4091101D572C4100D4FCC2 /* MainViewController.swift in Sources */,
 				CF1E9FC61D588713000E6D56 /* JSRightImageButton.swift in Sources */,
 				CF732AE81D5ABE4300820F66 /* JSPopoverAnimation.swift in Sources */,
 				CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */,
 				CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */,
 				CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */,
+				CF732AEF1D5B028800820F66 /* Const.swift in Sources */,
+				CF732AEC1D5AFECD00820F66 /* QAuthViewController.swift in Sources */,
 				CF1E9FCA1D588BA3000E6D56 /* JSPopoverViewController.swift in Sources */,
 				CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */,
 				CF1E9FBC1D583799000E6D56 /* BaseViewController.swift in Sources */,
@@ -596,6 +695,7 @@
 		};
 		CF4090EB1D56DA4000D4FCC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5871772DD31A7D01F81A26F /* Pods-Swift_Sina.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -609,6 +709,7 @@
 		};
 		CF4090EC1D56DA4000D4FCC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A16539A4B52B8D96286FEFB /* Pods-Swift_Sina.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

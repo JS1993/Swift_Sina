@@ -53,7 +53,10 @@ extension BaseViewController{
     }
     
     @objc private func loginAction() {
-        print("点击了登录")
+        let qauthVC = QAuthViewController()
+        let qauthNav=UINavigationController(rootViewController: qauthVC)
+        presentViewController(qauthNav, animated: true, completion: nil)
+        
     }
     
 }
