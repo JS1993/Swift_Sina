@@ -18,6 +18,23 @@ class BaseViewController: UITableViewController {
     
     //MARK: -系统回调函数
     override func loadView() {
+        
+        //1.从沙盒反归档帐户信息
+        //1.1获得沙盒路径
+        var accountPath=NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+        accountPath = (accountPath as NSString).stringByAppendingPathComponent("account.plist")
+        //1.2读取信息
+        let account = NSKeyedUnarchiver.unarchiveObjectWithFile(accountPath) as? UserAccount
+        
+        if let account = account {
+            //1.3比较access_token的有效期
+            if let expiresDate = account.expires_date{
+                //1.4如果没有过期，重设isLogin状态
+              isLogin = expiresDate.compare(NSDate()) == NSComparisonResult.OrderedDescending
+            }
+            
+        }
+        
         isLogin ? super.loadView() : setUpVisitorView()
     }
     
@@ -49,7 +66,8 @@ extension BaseViewController{
     }
     
     @objc private func registerAction() {
-        print("点击了注册")
+        
+        
     }
     
     @objc private func loginAction() {

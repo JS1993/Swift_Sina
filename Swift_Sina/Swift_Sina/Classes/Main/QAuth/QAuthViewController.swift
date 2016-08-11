@@ -145,7 +145,10 @@ extension QAuthViewController{
             account.screen_name=userInfoDict["screen_name"] as? String
             account.profile_image_url=userInfoDict["profile_image_url"] as? String
             
-            print(account)
+            //将account对象保存
+            var accountPath=NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+            accountPath = (accountPath as NSString).stringByAppendingPathComponent("account.plist")
+            NSKeyedArchiver.archiveRootObject(account, toFile: accountPath)
         }
     }
 }
