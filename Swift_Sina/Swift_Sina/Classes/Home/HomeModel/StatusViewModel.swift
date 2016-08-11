@@ -17,6 +17,8 @@ class StatusViewModel: NSObject {
     var  mbrankImage : UIImage?
     var sourceText : String?
     var  creatAtText : String?
+    var  profileImageUrl : NSURL?
+    
     
     init(status : StatusModel) {
         super.init()
@@ -53,6 +55,11 @@ class StatusViewModel: NSObject {
         if mbrank>0&&mbrank<7 {
             mbrankImage=UIImage(named: "common_icon_membership_level\(mbrank)")
         }
+        
+        //处理用户头像
+        let profileURLStr = status.user?.profile_image_url ?? ""
+        profileImageUrl = NSURL(string: profileURLStr)
+        
     }
     
     

@@ -47,7 +47,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_icon_membership_level1" translatesAutoresizingMaskIntoConstraints="NO" id="roB-MT-Cww" customClass="common_icon_membership_level1">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_icon_membership_level1" translatesAutoresizingMaskIntoConstraints="NO" id="roB-MT-Cww">
                                             <rect key="frame" x="134" y="21.5" width="14" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="14" id="g5s-DA-b7E"/>
@@ -94,7 +94,14 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="contentLabel" destination="8aM-7x-4vj" id="2L9-sL-bhz"/>
                                     <outlet property="contentTextWidthConstraint" destination="HNP-sU-7Fn" id="Tar-ZG-zWb"/>
+                                    <outlet property="createAtLabel" destination="V1u-lA-kZp" id="FPz-bJ-GNI"/>
+                                    <outlet property="iconImageV" destination="rkg-82-ix4" id="5Kf-WA-ESI"/>
+                                    <outlet property="screenNameLabel" destination="loe-zT-7Km" id="0ON-Wg-1xN"/>
+                                    <outlet property="sourceLabel" destination="rhE-qf-KhO" id="QYb-Dx-PRV"/>
+                                    <outlet property="verifiedImageV" destination="WDe-Ca-JH4" id="Zkg-Ci-MPE"/>
+                                    <outlet property="vipImageV" destination="roB-MT-Cww" id="mBd-pt-uoF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

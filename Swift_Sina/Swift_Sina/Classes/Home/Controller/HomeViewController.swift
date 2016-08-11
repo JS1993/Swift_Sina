@@ -98,11 +98,9 @@ extension HomeViewController{
         return self.statusViewModels.count
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell")!
+        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell")! as! HomeViewCell
         let statusViewModel = self.statusViewModels[indexPath.row]
-        
-        cell.textLabel?.text=statusViewModel.sourceText
-        cell.detailTextLabel?.text=statusViewModel.creatAtText
+        cell.viewModel=statusViewModel
         return cell
     }
 }
