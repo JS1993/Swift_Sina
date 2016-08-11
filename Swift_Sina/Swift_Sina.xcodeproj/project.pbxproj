@@ -12,6 +12,7 @@
 		CF19AEEB1D5C463B004BF2AD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19AEE91D5C463B004BF2AD /* WelcomeViewController.swift */; };
 		CF19AEEC1D5C463B004BF2AD /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF19AEEA1D5C463B004BF2AD /* WelcomeViewController.xib */; };
 		CF19AEEF1D5C6BC9004BF2AD /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19AEEE1D5C6BC9004BF2AD /* StatusModel.swift */; };
+		CF19AEF11D5C92FB004BF2AD /* NSDate-JSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19AEF01D5C92FB004BF2AD /* NSDate-JSExtension.swift */; };
 		CF1E9FA61D580E56000E6D56 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FA41D580E56000E6D56 /* Home.storyboard */; };
 		CF1E9FA81D580E78000E6D56 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FA71D580E78000E6D56 /* Message.storyboard */; };
 		CF1E9FAD1D580F40000E6D56 /* Publish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FAC1D580F40000E6D56 /* Publish.storyboard */; };
@@ -70,6 +71,7 @@
 		CF19AEE91D5C463B004BF2AD /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CF19AEEA1D5C463B004BF2AD /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		CF19AEEE1D5C6BC9004BF2AD /* StatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		CF19AEF01D5C92FB004BF2AD /* NSDate-JSExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-JSExtension.swift"; sourceTree = "<group>"; };
 		CF1E9FA51D580E56000E6D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		CF1E9FA71D580E78000E6D56 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../../Message.storyboard; sourceTree = "<group>"; };
 		CF1E9FAC1D580F40000E6D56 /* Publish.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Publish.storyboard; path = ../../Publish.storyboard; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				CF1E9FB51D582248000E6D56 /* UIButton-JSExtension.swift */,
 				CF1E9FC11D58830B000E6D56 /* UIBarButtonItem-JSExtension.swift */,
 				CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */,
+				CF19AEF01D5C92FB004BF2AD /* NSDate-JSExtension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */,
 				CF732AEF1D5B028800820F66 /* Const.swift in Sources */,
 				CF732AEC1D5AFECD00820F66 /* QAuthViewController.swift in Sources */,
+				CF19AEF11D5C92FB004BF2AD /* NSDate-JSExtension.swift in Sources */,
 				CF1E9FCA1D588BA3000E6D56 /* JSPopoverViewController.swift in Sources */,
 				CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */,
 				CF1E9FBC1D583799000E6D56 /* BaseViewController.swift in Sources */,
