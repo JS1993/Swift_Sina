@@ -42,7 +42,7 @@ class HomeViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentTextWidthConstraint.constant = UIScreen.mainScreen().bounds.height - 2*edgeMargin
+        contentTextWidthConstraint.constant = UIScreen.mainScreen().bounds.width - 2*edgeMargin
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

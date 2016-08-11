@@ -25,13 +25,12 @@ class HomeViewController: BaseViewController {
 
         visitorView.addAnimation()
         
-//        if !isLogin {
-//            return
-//        }
-        
         setUpNav()
         
         loadStatus()
+        
+        tableView.rowHeight=UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
     }
 }
 
