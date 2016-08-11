@@ -100,7 +100,7 @@ extension HomeViewController{
         let status = self.statuses[indexPath.row]
         
         cell.textLabel?.text=status.text
-        
+        cell.detailTextLabel?.text=status.createText
         return cell
     }
 }

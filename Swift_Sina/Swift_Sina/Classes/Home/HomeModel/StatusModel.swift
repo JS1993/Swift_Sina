@@ -11,7 +11,14 @@ import UIKit
 class StatusModel: NSObject {
 
     //MARK:-属性
-    var created_at : String?
+    var created_at : String? {
+        didSet {
+            guard let created_at = created_at else {
+                return
+            }
+            createText = NSDate.createDateString(created_at)
+        }
+    }
     var source : String? {
         didSet {
             
@@ -29,12 +36,18 @@ class StatusModel: NSObject {
     var mid : Int = 0
     
     var sourceText : String?
+    var createText : String?
+    
+    var user : UserModel?
     
     
     //MARK:-自定义构造函数
     init(dict : [String : AnyObject]) {
         super.init()
         setValuesForKeysWithDictionary(dict)
+        if let userDict = dict["user"] as? [String : AnyObject] {
+            user=UserModel(dict: userDict)
+        }
     }
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {}
 }
