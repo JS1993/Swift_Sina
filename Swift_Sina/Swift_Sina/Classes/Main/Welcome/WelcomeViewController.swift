@@ -25,15 +25,16 @@ class WelcomeViewController: UIViewController {
         let url = NSURL(string: proFileUrlString ?? "")
 
         headImageV.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar_default"))
-        //添加动画
+        // 添加动画
         bottomMargin.constant = UIScreen.mainScreen().bounds.size.height-200
         
         //执行动画
-        UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5.0, options: [], animations: {
+        UIView.animateWithDuration(3.0, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 2.0, options: [], animations: {
             
             self.view.layoutIfNeeded()
             
             }) { (_) in
+                UIApplication.sharedApplication().keyWindow?.rootViewController=UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
                 
         }
     }

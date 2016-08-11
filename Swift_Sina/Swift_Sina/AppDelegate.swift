@@ -13,17 +13,21 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var defalutVc : UIViewController? {
+        let isLogin = UserAccountViewModel.shareIntance.isLogin
+        
+        return isLogin ? WelcomeViewController() : UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         UITabBar.appearance().tintColor=UIColor.orangeColor()
         UINavigationBar.appearance().tintColor=UIColor.orangeColor()
 
-//        window=UIWindow()
-//        window?.frame=UIScreen .mainScreen().bounds
-//        window?.rootViewController=MainViewController()
-//        window?.makeKeyAndVisible()
+        window=UIWindow()
+        window?.frame=UIScreen .mainScreen().bounds
+        window?.rootViewController=defalutVc
+        window?.makeKeyAndVisible()
         return true
     }
 

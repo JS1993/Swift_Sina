@@ -145,10 +145,15 @@ extension QAuthViewController{
             account.screen_name=userInfoDict["screen_name"] as? String
             account.profile_image_url=userInfoDict["profile_image_url"] as? String
             
-            //将account对象保存
-            var accountPath=NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
-            accountPath = (accountPath as NSString).stringByAppendingPathComponent("account.plist")
-            NSKeyedArchiver.archiveRootObject(account, toFile: accountPath)
+            NSKeyedArchiver.archiveRootObject(account, toFile: UserAccountViewModel.shareIntance.accountPath)
+            
+            //将account对象设置到单例中
+            UserAccountViewModel.shareIntance.account=account
+            
+            //退出当前控制器
+            self.dismissViewControllerAnimated(false, completion: {
+                UIApplication.sharedApplication().keyWindow?.rootViewController = WelcomeViewController()
+            })
         }
     }
 }
