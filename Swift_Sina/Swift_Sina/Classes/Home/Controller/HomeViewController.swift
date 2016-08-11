@@ -28,6 +28,8 @@ class HomeViewController: BaseViewController {
 //        }
         
         setUpNav()
+        
+        loadStatus()
     }
 }
 
@@ -60,5 +62,27 @@ extension HomeViewController{
         popoverAnimation.presentFrame=CGRect(x: 100, y: 55, width: 180, height: 250)
         presentViewController(popoverVC, animated: true, completion: nil)
     }
+}
+
+// MARK: - 请求数据
+extension HomeViewController{
+    
+    private func loadStatus() {
+        JSNetWorkingTools.shareInstance.loadStatus { (result, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            print(result)
+            guard let resultArray = result else {
+                return
+            }
+            for statusDict in resultArray {
+                print(statusDict)
+            }
+            
+        }
+    }
+    
 }
 
