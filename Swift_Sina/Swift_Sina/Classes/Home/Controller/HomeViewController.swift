@@ -12,6 +12,8 @@ class HomeViewController: BaseViewController {
     
     private lazy var titleBtn:JSRightImageButton = JSRightImageButton()
     
+    private lazy var statuses : [StatusModel] = [StatusModel]()
+    
     //注意：在闭包或者函数中出现歧义，使用当前对象的属性或者调用方法，需要加self
     private lazy var popoverAnimation:JSPopoverAnimation = JSPopoverAnimation {[weak self] (isPresented) in
         
@@ -47,6 +49,8 @@ extension HomeViewController{
         titleBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
         titleBtn.addTarget(self, action: #selector(HomeViewController.titleBtnClicked), forControlEvents: .TouchUpInside)
         self.navigationItem.titleView=titleBtn
+        
+        self.tableView.tableFooterView=UIView()
     }
 }
 
@@ -73,16 +77,30 @@ extension HomeViewController{
                 print(error)
                 return
             }
-            print(result)
             guard let resultArray = result else {
                 return
             }
             for statusDict in resultArray {
-                print(statusDict)
+                self.statuses.append(StatusModel(dict: statusDict))
             }
+            self.tableView.reloadData()
             
         }
     }
     
 }
 
+// MARK: - tableViewDataSource
+extension HomeViewController{
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.statuses.count
+    }
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell")!
+        let status = self.statuses[indexPath.row]
+        
+        cell.textLabel?.text=status.text
+        
+        return cell
+    }
+}
