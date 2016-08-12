@@ -41,6 +41,7 @@
 		CF40911B1D5734C700D4FCC2 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */; };
 		CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */; };
 		CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */; };
+		CF602B081D5D5E2A002B0D3C /* PictureCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF602B071D5D5E2A002B0D3C /* PictureCollectionView.swift */; };
 		CF732AE61D5AAF8700820F66 /* JSPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AE51D5AAF8700820F66 /* JSPresentationController.swift */; };
 		CF732AE81D5ABE4300820F66 /* JSPopoverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AE71D5ABE4300820F66 /* JSPopoverAnimation.swift */; };
 		CF732AEC1D5AFECD00820F66 /* QAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AEA1D5AFECD00820F66 /* QAuthViewController.swift */; };
@@ -109,6 +110,7 @@
 		CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Controller/MessageViewController.swift; sourceTree = "<group>"; };
 		CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverViewController.swift; path = Controller/DiscoverViewController.swift; sourceTree = "<group>"; };
 		CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controller/ProfileViewController.swift; sourceTree = "<group>"; };
+		CF602B071D5D5E2A002B0D3C /* PictureCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCollectionView.swift; sourceTree = "<group>"; };
 		CF732AE51D5AAF8700820F66 /* JSPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPresentationController.swift; sourceTree = "<group>"; };
 		CF732AE71D5ABE4300820F66 /* JSPopoverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPopoverAnimation.swift; sourceTree = "<group>"; };
 		CF732AEA1D5AFECD00820F66 /* QAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAuthViewController.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				CF19AEF61D5CA254004BF2AD /* HomeViewCell.swift */,
 				CF4091161D572DEF00D4FCC2 /* HomeViewController.swift */,
 				CF1E9FC51D588713000E6D56 /* JSRightImageButton.swift */,
+				CF602B071D5D5E2A002B0D3C /* PictureCollectionView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				CF19AEF31D5C958D004BF2AD /* UserModel.swift in Sources */,
 				CF732AEC1D5AFECD00820F66 /* QAuthViewController.swift in Sources */,
 				CF19AEF11D5C92FB004BF2AD /* NSDate-JSExtension.swift in Sources */,
+				CF602B081D5D5E2A002B0D3C /* PictureCollectionView.swift in Sources */,
 				CF1E9FCA1D588BA3000E6D56 /* JSPopoverViewController.swift in Sources */,
 				CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */,
 				CF1E9FBC1D583799000E6D56 /* BaseViewController.swift in Sources */,

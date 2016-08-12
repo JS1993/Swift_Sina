@@ -25,6 +25,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet var createAtLabel: UILabel!
     @IBOutlet var sourceLabel: UILabel!
     @IBOutlet var screenNameLabel: UILabel!
+    @IBOutlet var pictureCollectionView: PictureCollectionView!
     
     var  viewModel : StatusViewModel? {
         didSet {
@@ -41,9 +42,9 @@ class HomeViewCell: UITableViewCell {
             screenNameLabel.textColor = viewModel.mbrankImage == nil ? UIColor.blueColor() : UIColor.orangeColor()
             //计算pictureView约束
             let pictureViewSize = calclulatePicViewSize(viewModel.picUrls.count)
-            pictureHeightConstraint.constant=pictureViewSize.height;
-            pictureViewWidthConstraint.constant=pictureViewSize.width;
-            
+            pictureHeightConstraint.constant=pictureViewSize.height
+            pictureViewWidthConstraint.constant=pictureViewSize.width
+            pictureCollectionView.picUrls=viewModel.picUrls
         }
     }
     
@@ -51,6 +52,10 @@ class HomeViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentTextWidthConstraint.constant = UIScreen.mainScreen().bounds.width - 2*edgeMargin
+        let layout = pictureCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let imageVWH = (UIScreen.mainScreen().bounds.width - 2*(edgeMargin+itemMargin))/3
+        layout.itemSize = CGSize(width: imageVWH, height: imageVWH)
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -153,8 +153,9 @@
                                                 <constraint firstAttribute="height" constant="54" id="xWc-yh-Mo2"/>
                                             </constraints>
                                         </view>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-Xp-8H3">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-Xp-8H3" customClass="PictureCollectionView" customModule="Swift_Sina" customModuleProvider="target">
                                             <rect key="frame" x="16" y="130" width="320" height="47"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="320" id="JlY-NT-6Wk"/>
                                                 <constraint firstAttribute="height" constant="47" id="oom-62-UE5"/>
@@ -166,14 +167,29 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZfC-3K-R91">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pictureCell" id="ZfC-3K-R91" customClass="PicCollectionViewCell" customModule="Swift_Sina" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fS-TJ-yHB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </view>
+                                                    <color key="backgroundColor" red="1" green="0.96227798388289099" blue="0.64292083614695983" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="9fS-TJ-yHB" firstAttribute="top" secondItem="ZfC-3K-R91" secondAttribute="top" id="710-Km-jz9"/>
+                                                        <constraint firstItem="9fS-TJ-yHB" firstAttribute="leading" secondItem="ZfC-3K-R91" secondAttribute="leading" id="Gut-ST-Mfa"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9fS-TJ-yHB" secondAttribute="trailing" id="JK8-o8-4Gj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9fS-TJ-yHB" secondAttribute="bottom" id="jHi-HP-h0W"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="imageV" destination="9fS-TJ-yHB" id="OqV-AZ-VYE"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -206,6 +222,7 @@
                                     <outlet property="contentTextWidthConstraint" destination="HNP-sU-7Fn" id="Tar-ZG-zWb"/>
                                     <outlet property="createAtLabel" destination="V1u-lA-kZp" id="FPz-bJ-GNI"/>
                                     <outlet property="iconImageV" destination="rkg-82-ix4" id="5Kf-WA-ESI"/>
+                                    <outlet property="pictureCollectionView" destination="hRb-Xp-8H3" id="LOJ-BB-PUi"/>
                                     <outlet property="pictureHeightConstraint" destination="oom-62-UE5" id="yrU-bH-Yqi"/>
                                     <outlet property="pictureViewWidthConstraint" destination="JlY-NT-6Wk" id="gdw-RR-Cmd"/>
                                     <outlet property="screenNameLabel" destination="loe-zT-7Km" id="0ON-Wg-1xN"/>
