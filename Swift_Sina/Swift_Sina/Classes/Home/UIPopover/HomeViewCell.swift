@@ -10,11 +10,14 @@ import UIKit
 import SDWebImage
 
 private let edgeMargin : CGFloat = 15
+private let itemMargin : CGFloat = 10
 
 class HomeViewCell: UITableViewCell {
 
     @IBOutlet var contentTextWidthConstraint: NSLayoutConstraint!
     
+    @IBOutlet var pictureHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var pictureViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet var iconImageV: UIImageView!
     @IBOutlet var verifiedImageV: UIImageView!
     @IBOutlet var vipImageV: UIImageView!
@@ -36,6 +39,11 @@ class HomeViewCell: UITableViewCell {
             sourceLabel.text=viewModel.sourceText
             contentLabel.text=viewModel.status?.text
             screenNameLabel.textColor = viewModel.mbrankImage == nil ? UIColor.blueColor() : UIColor.orangeColor()
+            //计算pictureView约束
+            let pictureViewSize = calclulatePicViewSize(viewModel.picUrls.count)
+            pictureHeightConstraint.constant=pictureViewSize.height;
+            pictureViewWidthConstraint.constant=pictureViewSize.width;
+            
         }
     }
     
@@ -50,3 +58,49 @@ class HomeViewCell: UITableViewCell {
     }
 
 }
+
+// MARK: - 计算方法
+extension HomeViewCell{
+    //1.没有配图；2.单张配图；3.四张配图：田字格；4.其他张配图：rows=(count - 1)/3+1 ; height=rows*rowHeight
+    private func calclulatePicViewSize(count : Int )->CGSize{
+        
+        if count==0 {
+            return CGSizeZero
+        }
+        
+        let imageVWH = (UIScreen.mainScreen().bounds.width - 2*(edgeMargin+itemMargin))/3
+        if count==4 {
+            let picViewWH = imageVWH*2+itemMargin
+            return CGSize(width: picViewWH, height: picViewWH)
+        }
+        
+        let rows = CGFloat((count - 1)/3 + 1)
+        let picHeight = rows * imageVWH + (rows - 1) * itemMargin
+        let picWidth = UIScreen.mainScreen().bounds.width - 2*edgeMargin
+        return CGSize(width: picWidth, height: picHeight)
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
