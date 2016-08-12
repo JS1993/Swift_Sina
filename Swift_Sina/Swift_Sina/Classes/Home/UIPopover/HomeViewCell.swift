@@ -52,9 +52,6 @@ class HomeViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentTextWidthConstraint.constant = UIScreen.mainScreen().bounds.width - 2*edgeMargin
-        let layout = pictureCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let imageVWH = (UIScreen.mainScreen().bounds.width - 2*(edgeMargin+itemMargin))/3
-        layout.itemSize = CGSize(width: imageVWH, height: imageVWH)
         
     }
 
@@ -69,16 +66,28 @@ extension HomeViewCell{
     //1.没有配图；2.单张配图；3.四张配图：田字格；4.其他张配图：rows=(count - 1)/3+1 ; height=rows*rowHeight
     private func calclulatePicViewSize(count : Int )->CGSize{
         
+        //1.没有配图
         if count==0 {
             return CGSizeZero
         }
         
+        let layout = pictureCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        //2.一张图片需要下载之后再加载大小
+        if count==1 {
+            let image = SDWebImageManager.sharedManager().imageCache.imageFromDiskCacheForKey(viewModel?.picUrls.last?.absoluteString)
+            layout.itemSize = CGSize(width: image.size.width*2, height: image.size.height*2)
+            return CGSize(width: image.size.width*2, height: image.size.height*2)
+        }
+        
+        //4张图片
         let imageVWH = (UIScreen.mainScreen().bounds.width - 2*(edgeMargin+itemMargin))/3
+        layout.itemSize = CGSize(width: imageVWH, height: imageVWH)
         if count==4 {
             let picViewWH = imageVWH*2+itemMargin
             return CGSize(width: picViewWH, height: picViewWH)
         }
         
+        //其他张配图
         let rows = CGFloat((count - 1)/3 + 1)
         let picHeight = rows * imageVWH + (rows - 1) * itemMargin
         let picWidth = UIScreen.mainScreen().bounds.width - 2*edgeMargin

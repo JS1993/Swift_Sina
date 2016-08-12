@@ -34,13 +34,23 @@ extension PictureCollectionView : UICollectionViewDataSource{
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("pictureCell", forIndexPath: indexPath) as! PicCollectionViewCell
-        cell.imageV.sd_setImageWithURL(picUrls[indexPath.row])
+        cell.picURL=picUrls[indexPath.row]
         return cell
     }
     
 }
 
 class PicCollectionViewCell: UICollectionViewCell {
+    
+    var picURL : NSURL?{
+        didSet{
+            guard let picUrlx = picURL else {
+                return
+            }
+            
+            imageV.sd_setImageWithURL(picUrlx, placeholderImage: UIImage(named: "empty_picture"), completed: nil)
+        }
+    }
        @IBOutlet var imageV: UIImageView!
 }
 

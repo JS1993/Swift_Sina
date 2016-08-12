@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+import SVProgressHUD
 
 class HomeViewController: BaseViewController {
     
@@ -71,6 +73,9 @@ extension HomeViewController{
 extension HomeViewController{
     
     private func loadStatus() {
+        
+        SVProgressHUD.show()
+        
         JSNetWorkingTools.shareInstance.loadStatus { (result, error) in
             if error != nil {
                 print(error)
@@ -84,8 +89,31 @@ extension HomeViewController{
                 let statusViewModel=StatusViewModel(status: status)
                 self.statusViewModels.append(statusViewModel)
             }
-            self.tableView.reloadData()
+            self.cacheImages(self.statusViewModels)
             
+        }
+    }
+    
+    //缓存图片
+    private func cacheImages(viewModels : [StatusViewModel]){
+        
+        //创建组
+        let group = dispatch_group_create()
+        
+        for viewModel in viewModels {
+            for picURL in viewModel.picUrls {
+                dispatch_group_enter(group)
+                SDWebImageManager.sharedManager().downloadImageWithURL(picURL, options: [], progress: nil, completed: { (_, _, _, _,_) in
+                    //下载完成离开组
+                    dispatch_group_leave(group)
+                })
+            }
+        }
+        
+        //组任务完成时，刷新表格
+        dispatch_group_notify(group, dispatch_get_main_queue()) {
+            SVProgressHUD.dismiss()
+            self.tableView.reloadData()
         }
     }
     
