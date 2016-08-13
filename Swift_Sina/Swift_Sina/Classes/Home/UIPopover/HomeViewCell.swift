@@ -26,6 +26,7 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet var sourceLabel: UILabel!
     @IBOutlet var screenNameLabel: UILabel!
     @IBOutlet var pictureCollectionView: PictureCollectionView!
+    @IBOutlet var reweetedContentLabel: UILabel!
     
     var  viewModel : StatusViewModel? {
         didSet {
@@ -45,6 +46,15 @@ class HomeViewCell: UITableViewCell {
             pictureHeightConstraint.constant=pictureViewSize.height
             pictureViewWidthConstraint.constant=pictureViewSize.width
             pictureCollectionView.picUrls=viewModel.picUrls
+            //设置转发微博的正文
+            if viewModel.status?.retweeted_status != nil {
+                if let screen_name = viewModel.status?.retweeted_status?.user?.screen_name,
+                    let reweetedText = viewModel.status?.retweeted_status?.text{
+                    reweetedContentLabel.text = "@"+"\(screen_name) : "+reweetedText;
+                }
+            }else{
+                reweetedContentLabel.text = "";
+            }
         }
     }
     

@@ -13,7 +13,7 @@ extension NSDate {
         // 1.创建时间格式化对象
         let fmt = NSDateFormatter()
         fmt.dateFormat = "EEE MM dd HH:mm:ss Z yyyy"
-        fmt.locale = NSLocale(localeIdentifier: "en")
+        fmt.locale = NSLocale(localeIdentifier: "cn")
         
         // 2.将字符串时间,转成NSDate类型
         guard let createDate = fmt.dateFromString(createAtStr) else {

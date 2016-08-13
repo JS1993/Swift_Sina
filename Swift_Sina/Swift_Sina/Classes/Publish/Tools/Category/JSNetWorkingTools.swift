@@ -90,6 +90,7 @@ extension JSNetWorkingTools{
         
         let urlStr = "https://api.weibo.com/2/statuses/home_timeline.json"
         let parameters = ["access_token" : (UserAccountViewModel.shareIntance.account?.access_token)!]
+        
         SVProgressHUD.show()
         request(.GET, urlString: urlStr, parameters: parameters) { (result, error)->() in
             
@@ -101,6 +102,5 @@ extension JSNetWorkingTools{
             finished(result:resultDict["statuses"] as? [[String : AnyObject]], error: error)
             SVProgressHUD.dismiss()
         }
-        
     }
 }

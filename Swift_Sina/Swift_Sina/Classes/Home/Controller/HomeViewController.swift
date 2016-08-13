@@ -51,7 +51,7 @@ extension HomeViewController{
         titleBtn.addTarget(self, action: #selector(HomeViewController.titleBtnClicked), forControlEvents: .TouchUpInside)
         self.navigationItem.titleView=titleBtn
         
-        self.tableView.tableFooterView=UIView()
+        self.tableView.tableFooterView = UIView()
     }
 }
 
