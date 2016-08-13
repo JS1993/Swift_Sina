@@ -27,12 +27,13 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet var screenNameLabel: UILabel!
     @IBOutlet var pictureCollectionView: PictureCollectionView!
     @IBOutlet var reweetedContentLabel: UILabel!
-    
+    @IBOutlet var bgView: UIView!
     var  viewModel : StatusViewModel? {
         didSet {
             guard let viewModel = viewModel else {
                 return
             }
+            
             iconImageV.sd_setImageWithURL(viewModel.profileImageUrl, placeholderImage: UIImage(named: "avatar_default"))
             verifiedImageV.image=viewModel.verifiedImage
             vipImageV.image=viewModel.mbrankImage
@@ -51,9 +52,11 @@ class HomeViewCell: UITableViewCell {
                 if let screen_name = viewModel.status?.retweeted_status?.user?.screen_name,
                     let reweetedText = viewModel.status?.retweeted_status?.text{
                     reweetedContentLabel.text = "@"+"\(screen_name) : "+reweetedText;
+                    bgView.hidden=false;
                 }
             }else{
                 reweetedContentLabel.text = "";
+                bgView.hidden=true;
             }
         }
     }
