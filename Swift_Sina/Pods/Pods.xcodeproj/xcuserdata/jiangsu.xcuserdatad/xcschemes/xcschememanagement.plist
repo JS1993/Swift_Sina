@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Swift_Sina.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,22 +42,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>306E9FFBFF7B2D970221B1E79573FD0E</key>
+		<key>29DD99664D189A7CA206368F493B1E0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3418F4F1A55E0F76ED8192C6296A9146</key>
+		<key>7799657136A95CB066CA2D0106AE6338</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>40E175F06B1CBE2C2C0947F010CD4E08</key>
+		<key>D4AABCB42B1CC1F128D2FFFDEC09E875</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>97C4A43E79C0FD35BF27D23EB4B01400</key>
+		<key>DB6391556C6D3DAA7667B9148D4FBBE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECF8E5901C76A4C8129FF1E9C3ED93E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

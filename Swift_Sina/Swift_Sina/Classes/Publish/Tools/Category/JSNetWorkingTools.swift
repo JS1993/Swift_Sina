@@ -86,12 +86,11 @@ extension JSNetWorkingTools{
 
 // MARK: - 请求首页数据
 extension JSNetWorkingTools{
-    func loadStatus(finished:(result : [[String : AnyObject]]?,error : NSError?)->()){
+    func loadStatus(since_id: Int,max_id : Int ,finished:(result : [[String : AnyObject]]?,error : NSError?)->()){
         
         let urlStr = "https://api.weibo.com/2/statuses/home_timeline.json"
-        let parameters = ["access_token" : (UserAccountViewModel.shareIntance.account?.access_token)!]
-        
-        SVProgressHUD.show()
+        let parameters = ["access_token" : (UserAccountViewModel.shareIntance.account?.access_token)!,
+                          "since_id" : "\(since_id)","max_id" : "\(max_id)"]
         request(.GET, urlString: urlStr, parameters: parameters) { (result, error)->() in
             
             guard let resultDict = result as? [String : AnyObject] else {
@@ -100,7 +99,6 @@ extension JSNetWorkingTools{
             }
             
             finished(result:resultDict["statuses"] as? [[String : AnyObject]], error: error)
-            SVProgressHUD.dismiss()
         }
     }
 }

@@ -32,6 +32,7 @@ class StatusViewModel: NSObject {
             let startIndex = (source as NSString).rangeOfString(">").location + 1
             let length = (source as NSString).rangeOfString("</").location - startIndex
             sourceText = (source as NSString).substringWithRange(NSRange(location: startIndex, length: length))
+            sourceText = "来自" + sourceText!
         }
         
         //处理时间

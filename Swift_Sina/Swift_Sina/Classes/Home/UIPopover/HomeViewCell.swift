@@ -16,8 +16,10 @@ class HomeViewCell: UITableViewCell {
 
     @IBOutlet var contentTextWidthConstraint: NSLayoutConstraint!
     
+    @IBOutlet var contentLabelTopConstraint: NSLayoutConstraint!
     @IBOutlet var pictureHeightConstraint: NSLayoutConstraint!
     @IBOutlet var pictureViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet var pictureViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet var iconImageV: UIImageView!
     @IBOutlet var verifiedImageV: UIImageView!
     @IBOutlet var vipImageV: UIImageView!
@@ -53,10 +55,12 @@ class HomeViewCell: UITableViewCell {
                     let reweetedText = viewModel.status?.retweeted_status?.text{
                     reweetedContentLabel.text = "@"+"\(screen_name) : "+reweetedText;
                     bgView.hidden=false;
+                    contentLabelTopConstraint.constant = 15
                 }
             }else{
                 reweetedContentLabel.text = "";
                 bgView.hidden=true;
+                contentLabelTopConstraint.constant = 0
             }
         }
     }
@@ -81,8 +85,10 @@ extension HomeViewCell{
         
         //1.没有配图
         if count==0 {
+            pictureViewBottomConstraint.constant=0
             return CGSizeZero
         }
+        pictureViewBottomConstraint.constant=10
         
         let layout = pictureCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         //2.一张图片需要下载之后再加载大小

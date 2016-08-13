@@ -184,7 +184,7 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </view>
-                                                    <color key="backgroundColor" red="1" green="0.96227798388289099" blue="0.64292083614695983" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="9fS-TJ-yHB" firstAttribute="top" secondItem="ZfC-3K-R91" secondAttribute="top" id="710-Km-jz9"/>
                                                         <constraint firstItem="9fS-TJ-yHB" firstAttribute="leading" secondItem="ZfC-3K-R91" secondAttribute="leading" id="Gut-ST-Mfa"/>
@@ -238,11 +238,13 @@
                                 <connections>
                                     <outlet property="bgView" destination="oc0-yQ-Gzr" id="aWa-da-HZm"/>
                                     <outlet property="contentLabel" destination="8aM-7x-4vj" id="2L9-sL-bhz"/>
+                                    <outlet property="contentLabelTopConstraint" destination="T5L-yb-eez" id="UoC-hD-c0y"/>
                                     <outlet property="contentTextWidthConstraint" destination="HNP-sU-7Fn" id="Tar-ZG-zWb"/>
                                     <outlet property="createAtLabel" destination="V1u-lA-kZp" id="FPz-bJ-GNI"/>
                                     <outlet property="iconImageV" destination="rkg-82-ix4" id="5Kf-WA-ESI"/>
                                     <outlet property="pictureCollectionView" destination="hRb-Xp-8H3" id="LOJ-BB-PUi"/>
                                     <outlet property="pictureHeightConstraint" destination="oom-62-UE5" id="yrU-bH-Yqi"/>
+                                    <outlet property="pictureViewBottomConstraint" destination="xlc-lZ-5JY" id="Q0j-dj-VWK"/>
                                     <outlet property="pictureViewWidthConstraint" destination="JlY-NT-6Wk" id="gdw-RR-Cmd"/>
                                     <outlet property="reweetedContentLabel" destination="dSm-s6-4j3" id="CnO-Gf-FV3"/>
                                     <outlet property="screenNameLabel" destination="loe-zT-7Km" id="0ON-Wg-1xN"/>

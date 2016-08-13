@@ -9,6 +9,7 @@
 import UIKit
 import SDWebImage
 import SVProgressHUD
+import MJRefresh
 
 class HomeViewController: BaseViewController {
     
@@ -29,7 +30,7 @@ class HomeViewController: BaseViewController {
         
         setUpNav()
         
-        loadStatus()
+        setUpRefresh()
         
         tableView.rowHeight=UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
@@ -53,6 +54,20 @@ extension HomeViewController{
         
         self.tableView.tableFooterView = UIView()
     }
+    
+    //设置下拉刷新
+    private func setUpRefresh(){
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction:#selector(HomeViewController.loadNewStatus))
+        header.setTitle("下拉刷新", forState: .Idle)
+        header.setTitle("松开刷新", forState: .Pulling)
+        header.setTitle("加载中...", forState: .Refreshing)
+        tableView.mj_header = header
+        tableView.mj_header .beginRefreshing()
+        
+        tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget:self, refreshingAction: #selector(HomeViewController.loadMoreStatus))
+        
+    }
+    
 }
 
 // MARK: - 监听titleBtn的点击事件
@@ -72,11 +87,26 @@ extension HomeViewController{
 // MARK: - 请求数据
 extension HomeViewController{
     
-    private func loadStatus() {
+    @objc private func loadNewStatus() {
+        loadStatus(true)
+    }
+    
+    @objc private func loadMoreStatus(){
+        loadStatus(false)
+    }
+    private func loadStatus(isNew : Bool) {
         
-        SVProgressHUD.show()
+        //获取sinceID/maxID
+        var sinceID = 0
+        var maxID = 0
+        if isNew {
+            sinceID = statusViewModels.first?.status?.mid ?? 0
+        }else{
+            maxID = statusViewModels.last?.status?.mid ?? 0
+            maxID = maxID == 0 ? 0 : maxID-1
+        }
         
-        JSNetWorkingTools.shareInstance.loadStatus { (result, error) in
+        JSNetWorkingTools.shareInstance.loadStatus(sinceID,max_id: maxID) { (result, error) in
             if error != nil {
                 print(error)
                 return
@@ -84,10 +114,17 @@ extension HomeViewController{
             guard let resultArray = result else {
                 return
             }
+            var tempStatuses : [StatusViewModel] = [StatusViewModel]()
             for statusDict in resultArray {
                 let status = StatusModel(dict: statusDict)
                 let statusViewModel=StatusViewModel(status: status)
-                self.statusViewModels.append(statusViewModel)
+                tempStatuses.append(statusViewModel)
+            }
+            
+            if isNew {
+               self.statusViewModels = tempStatuses + self.statusViewModels
+            }else{
+                self.statusViewModels = self.statusViewModels + tempStatuses
             }
             self.cacheImages(self.statusViewModels)
             
@@ -112,8 +149,10 @@ extension HomeViewController{
         
         //组任务完成时，刷新表格
         dispatch_group_notify(group, dispatch_get_main_queue()) {
-            SVProgressHUD.dismiss()
+          
             self.tableView.reloadData()
+            self.tableView.mj_header .endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
         }
     }
     

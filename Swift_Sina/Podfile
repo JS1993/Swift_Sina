@@ -12,6 +12,8 @@ pod "SnapKit"
 
 pod "SVProgressHUD"
 
+pod "MJRefresh"
+
 target "Swift_Sina" do
 
 end
