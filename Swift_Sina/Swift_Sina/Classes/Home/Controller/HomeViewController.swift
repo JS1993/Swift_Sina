@@ -17,6 +17,8 @@ class HomeViewController: BaseViewController {
     
     private lazy var statusViewModels : [StatusViewModel] = [StatusViewModel]()
     
+    private lazy var tipLabel : UILabel = UILabel()
+    
     //注意：在闭包或者函数中出现歧义，使用当前对象的属性或者调用方法，需要加self
     private lazy var popoverAnimation:JSPopoverAnimation = JSPopoverAnimation {[weak self] (isPresented) in
         
@@ -31,6 +33,8 @@ class HomeViewController: BaseViewController {
         setUpNav()
         
         setUpRefresh()
+        
+        setUpTipLabel()
         
         tableView.rowHeight=UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
@@ -51,8 +55,6 @@ extension HomeViewController{
         titleBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
         titleBtn.addTarget(self, action: #selector(HomeViewController.titleBtnClicked), forControlEvents: .TouchUpInside)
         self.navigationItem.titleView=titleBtn
-        
-        self.tableView.tableFooterView = UIView()
     }
     
     //设置下拉刷新
@@ -68,6 +70,15 @@ extension HomeViewController{
         
     }
     
+    //设置tipLabel
+    private func setUpTipLabel(){
+        navigationController?.navigationBar.insertSubview(tipLabel, atIndex: 0)
+        tipLabel.frame=CGRect(x: 0, y:10, width: UIScreen.mainScreen().bounds.width, height: 32)
+        tipLabel.backgroundColor=UIColor.orangeColor()
+        tipLabel.font=UIFont.systemFontOfSize(14.0)
+        tipLabel.textAlignment = .Center
+        tipLabel.hidden = true
+    }
 }
 
 // MARK: - 监听titleBtn的点击事件
@@ -126,13 +137,13 @@ extension HomeViewController{
             }else{
                 self.statusViewModels = self.statusViewModels + tempStatuses
             }
-            self.cacheImages(self.statusViewModels)
+            self.cacheImages(isNew,viewModels: tempStatuses)
             
         }
     }
     
     //缓存图片
-    private func cacheImages(viewModels : [StatusViewModel]){
+    private func cacheImages(isNew: Bool ,viewModels : [StatusViewModel]){
         
         //创建组
         let group = dispatch_group_create()
@@ -153,6 +164,29 @@ extension HomeViewController{
             self.tableView.reloadData()
             self.tableView.mj_header .endRefreshing()
             self.tableView.mj_footer.endRefreshing()
+            
+            //显示提示label
+            self.showTipLabel(isNew,count: viewModels.count)
+        }
+    }
+    
+    //显示提示label
+    private func showTipLabel(isNew: Bool ,count : Int){
+        if !isNew {
+            return
+        }
+        tipLabel.hidden = false
+        tipLabel.text = count == 0 ? "没有新数据" : "\(count)条新微博"
+        
+        //执行动画
+        UIView.animateWithDuration(1.0, animations: { 
+            self.tipLabel.frame.origin.y = 44
+            }) { (_) in
+             UIView.animateWithDuration(1.0, delay: 1.0, options: [], animations: { 
+                 self.tipLabel.frame.origin.y = 10
+                }, completion: { (_) in
+                    self.tipLabel.hidden = true
+             })
         }
     }
     
