@@ -9,16 +9,16 @@
         <scene sceneID="NRI-wo-XZA">
             <objects>
                 <tableViewController id="kLZ-bf-jMV" customClass="HomeViewController" customModule="Swift_Sina" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="241" sectionHeaderHeight="28" sectionFooterHeight="28" id="eWx-Up-Ld4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="332" sectionHeaderHeight="28" sectionFooterHeight="28" id="eWx-Up-Ld4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="241" id="Yze-AR-EuY" customClass="HomeViewCell" customModule="Swift_Sina" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="241"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="332" id="Yze-AR-EuY" customClass="HomeViewCell" customModule="Swift_Sina" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="332"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yze-AR-EuY" id="ShL-w0-YQy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="332"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default" translatesAutoresizingMaskIntoConstraints="NO" id="rkg-82-ix4">
@@ -44,7 +44,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jiangsu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loe-zT-7Km">
                                             <rect key="frame" x="64" y="18" width="55" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_icon_membership_level1" translatesAutoresizingMaskIntoConstraints="NO" id="roB-MT-Cww">
@@ -66,17 +66,17 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天天气不错哦" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aM-7x-4vj">
-                                            <rect key="frame" x="16" y="73" width="332" height="47"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="今天天气不错哦" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aM-7x-4vj">
+                                            <rect key="frame" x="16" y="73" width="332" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="332" id="HNP-sU-7Fn"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uF-0S-2Xh">
-                                            <rect key="frame" x="0.0" y="187" width="375" height="54"/>
+                                            <rect key="frame" x="0.0" y="278" width="375" height="54"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdP-1a-7hA">
                                                     <rect key="frame" x="0.0" y="1" width="375" height="40"/>
@@ -154,7 +154,7 @@
                                             </constraints>
                                         </view>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hRb-Xp-8H3" customClass="PictureCollectionView" customModule="Swift_Sina" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="130" width="320" height="47"/>
+                                            <rect key="frame" x="16" y="221" width="320" height="47"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="320" id="JlY-NT-6Wk"/>
@@ -193,6 +193,12 @@
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天天气确实不错" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSm-s6-4j3">
+                                            <rect key="frame" x="16" y="106" width="332" height="105"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="6uF-0S-2Xh" secondAttribute="trailing" id="0Pl-PY-gCN"/>
@@ -203,18 +209,21 @@
                                         <constraint firstItem="roB-MT-Cww" firstAttribute="centerY" secondItem="loe-zT-7Km" secondAttribute="centerY" id="IdX-G5-K3e"/>
                                         <constraint firstItem="6uF-0S-2Xh" firstAttribute="leading" secondItem="ShL-w0-YQy" secondAttribute="leading" id="LhC-cZ-aPY"/>
                                         <constraint firstItem="8aM-7x-4vj" firstAttribute="top" secondItem="rkg-82-ix4" secondAttribute="bottom" constant="15" id="Mns-Xu-YL8"/>
+                                        <constraint firstItem="dSm-s6-4j3" firstAttribute="width" secondItem="8aM-7x-4vj" secondAttribute="width" id="PYL-f9-UB3"/>
                                         <constraint firstItem="WDe-Ca-JH4" firstAttribute="bottom" secondItem="rkg-82-ix4" secondAttribute="bottom" id="QXK-p7-gtJ"/>
+                                        <constraint firstItem="dSm-s6-4j3" firstAttribute="top" secondItem="8aM-7x-4vj" secondAttribute="bottom" constant="15" id="T5L-yb-eez"/>
                                         <constraint firstItem="rhE-qf-KhO" firstAttribute="centerY" secondItem="V1u-lA-kZp" secondAttribute="centerY" id="Ugd-wY-xtH"/>
                                         <constraint firstItem="hRb-Xp-8H3" firstAttribute="leading" secondItem="rkg-82-ix4" secondAttribute="leading" id="ZvP-St-UNa"/>
                                         <constraint firstItem="V1u-lA-kZp" firstAttribute="bottom" secondItem="WDe-Ca-JH4" secondAttribute="bottom" id="ad2-sn-4Ir"/>
-                                        <constraint firstItem="hRb-Xp-8H3" firstAttribute="top" secondItem="8aM-7x-4vj" secondAttribute="bottom" constant="10" id="az0-be-ZjB"/>
                                         <constraint firstItem="rhE-qf-KhO" firstAttribute="leading" secondItem="V1u-lA-kZp" secondAttribute="trailing" constant="8" id="crW-at-JeX"/>
                                         <constraint firstItem="rkg-82-ix4" firstAttribute="leading" secondItem="ShL-w0-YQy" secondAttribute="leadingMargin" constant="8" id="hIA-2u-tYr"/>
+                                        <constraint firstItem="hRb-Xp-8H3" firstAttribute="top" secondItem="dSm-s6-4j3" secondAttribute="bottom" constant="10" id="jGN-CG-zzE"/>
                                         <constraint firstItem="WDe-Ca-JH4" firstAttribute="trailing" secondItem="rkg-82-ix4" secondAttribute="trailing" id="kuh-FP-bXX"/>
                                         <constraint firstItem="roB-MT-Cww" firstAttribute="leading" secondItem="loe-zT-7Km" secondAttribute="trailing" constant="8" id="tR7-3S-v5a"/>
                                         <constraint firstItem="8aM-7x-4vj" firstAttribute="leading" secondItem="rkg-82-ix4" secondAttribute="leading" id="uYS-7O-Qnm"/>
                                         <constraint firstItem="loe-zT-7Km" firstAttribute="leading" secondItem="rkg-82-ix4" secondAttribute="trailing" constant="8" id="w7e-t9-cr6"/>
                                         <constraint firstItem="6uF-0S-2Xh" firstAttribute="top" secondItem="hRb-Xp-8H3" secondAttribute="bottom" priority="700" constant="10" id="xlc-lZ-5JY"/>
+                                        <constraint firstItem="dSm-s6-4j3" firstAttribute="leading" secondItem="8aM-7x-4vj" secondAttribute="leading" id="xw5-ai-a4K"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
