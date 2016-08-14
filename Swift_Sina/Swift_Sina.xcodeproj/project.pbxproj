@@ -53,6 +53,7 @@
 		CFDF5D691D60050E009B1680 /* PublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDF5D671D60050E009B1680 /* PublishViewController.xib */; };
 		CFDF5D6B1D600705009B1680 /* PublishTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF5D6A1D600705009B1680 /* PublishTitleView.swift */; };
 		CFDF5D6D1D600D26009B1680 /* JSPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF5D6C1D600D26009B1680 /* JSPlaceHolderTextView.swift */; };
+		CFDF5D7C1D604D7C009B1680 /* PicPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF5D7B1D604D7C009B1680 /* PicPickerCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		CFDF5D671D60050E009B1680 /* PublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishViewController.xib; sourceTree = "<group>"; };
 		CFDF5D6A1D600705009B1680 /* PublishTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTitleView.swift; sourceTree = "<group>"; };
 		CFDF5D6C1D600D26009B1680 /* JSPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPlaceHolderTextView.swift; sourceTree = "<group>"; };
+		CFDF5D7B1D604D7C009B1680 /* PicPickerCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPickerCollectionView.swift; sourceTree = "<group>"; };
 		F5871772DD31A7D01F81A26F /* Pods-Swift_Sina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sina/Pods-Swift_Sina.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -365,6 +367,7 @@
 		CF40910B1D5720C900D4FCC2 /* Publish */ = {
 			isa = PBXGroup;
 			children = (
+				CFDF5D7A1D604D50009B1680 /* PicPicker */,
 				CF1E9FAC1D580F40000E6D56 /* Publish.storyboard */,
 				CFDF5D661D60050E009B1680 /* PublishViewController.swift */,
 				CFDF5D671D60050E009B1680 /* PublishViewController.xib */,
@@ -383,6 +386,14 @@
 				CF19AEE61D5C41E4004BF2AD /* UserAccountViewModel.swift */,
 			);
 			path = QAuth;
+			sourceTree = "<group>";
+		};
+		CFDF5D7A1D604D50009B1680 /* PicPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CFDF5D7B1D604D7C009B1680 /* PicPickerCollectionView.swift */,
+			);
+			path = PicPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,6 +605,7 @@
 				CF732AEC1D5AFECD00820F66 /* QAuthViewController.swift in Sources */,
 				CFDF5D6D1D600D26009B1680 /* JSPlaceHolderTextView.swift in Sources */,
 				CFDF5D681D60050E009B1680 /* PublishViewController.swift in Sources */,
+				CFDF5D7C1D604D7C009B1680 /* PicPickerCollectionView.swift in Sources */,
 				CFDF5D6B1D600705009B1680 /* PublishTitleView.swift in Sources */,
 				CF19AEF11D5C92FB004BF2AD /* NSDate-JSExtension.swift in Sources */,
 				CF602B081D5D5E2A002B0D3C /* PictureCollectionView.swift in Sources */,

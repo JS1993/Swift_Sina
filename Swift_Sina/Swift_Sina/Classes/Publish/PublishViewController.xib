@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="keyBoardToolBar" destination="o1O-C0-zec" id="2g8-x1-fUs"/>
                 <outlet property="keyBoradToolBarBottomConstraint" destination="qYP-ku-aTB" id="A5u-6Y-wGY"/>
+                <outlet property="pictureCollectionViewHeightConstraint" destination="WmH-nn-Pco" id="udW-RK-VHB"/>
                 <outlet property="publishTextView" destination="nwa-98-3By" id="PUH-Vn-jVG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,6 +27,19 @@
                         <outlet property="delegate" destination="-1" id="yHt-53-NdJ"/>
                     </connections>
                 </textView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="utO-3x-1my" customClass="PicPickerCollectionView" customModule="Swift_Sina" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="WmH-nn-Pco"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ATW-qF-QR0">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1O-C0-zec">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <items>
@@ -36,6 +50,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="compose_toolbar_picture"/>
                                 <state key="highlighted" image="compose_toolbar_picture_highlighted"/>
+                                <connections>
+                                    <action selector="picturePicker:" destination="-1" eventType="touchUpInside" id="RJd-HK-0QS"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5Qg-RH-2Vi"/>
@@ -45,6 +62,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="compose_mentionbutton_background"/>
                                 <state key="highlighted" image="compose_mentionbutton_background_highlighted"/>
+                                <connections>
+                                    <action selector="atAction:" destination="-1" eventType="touchUpInside" id="A9P-jL-HnG"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="ZuW-hb-7sU"/>
@@ -54,6 +74,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="compose_trendbutton_background"/>
                                 <state key="highlighted" image="compose_trendbutton_background_highlighted"/>
+                                <connections>
+                                    <action selector="thingAction:" destination="-1" eventType="touchUpInside" id="qfS-gp-GGh"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="HWo-OQ-Sgq"/>
@@ -63,6 +86,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="compose_emoticonbutton_background"/>
                                 <state key="highlighted" image="compose_emoticonbutton_background_highlighted"/>
+                                <connections>
+                                    <action selector="emotionAction:" destination="-1" eventType="touchUpInside" id="eC4-Xn-T3p"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="IKa-63-i8X"/>
@@ -72,6 +98,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="compose_keyboardbutton_background"/>
                                 <state key="highlighted" image="compose_keyboardbutton_background_highlighted"/>
+                                <connections>
+                                    <action selector="keyBoardAction:" destination="-1" eventType="touchUpInside" id="Gas-ZJ-O2U"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem width="7" style="plain" systemItem="fixedSpace" id="iIe-Pq-7Jz"/>
@@ -82,9 +111,12 @@
             <constraints>
                 <constraint firstItem="nwa-98-3By" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5ib-aa-GnP"/>
                 <constraint firstItem="nwa-98-3By" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EVm-nu-fTe"/>
+                <constraint firstItem="utO-3x-1my" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GsK-F0-WP4"/>
+                <constraint firstAttribute="trailing" secondItem="utO-3x-1my" secondAttribute="trailing" id="MhT-br-Gfr"/>
                 <constraint firstAttribute="trailing" secondItem="o1O-C0-zec" secondAttribute="trailing" id="Xt3-e2-BWI"/>
                 <constraint firstAttribute="trailing" secondItem="nwa-98-3By" secondAttribute="trailing" id="apt-Pw-0l6"/>
                 <constraint firstItem="o1O-C0-zec" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eOw-te-7dK"/>
+                <constraint firstAttribute="bottom" secondItem="utO-3x-1my" secondAttribute="bottom" id="gWs-Ej-AaO"/>
                 <constraint firstAttribute="bottom" secondItem="o1O-C0-zec" secondAttribute="bottom" id="qYP-ku-aTB"/>
                 <constraint firstAttribute="bottom" secondItem="nwa-98-3By" secondAttribute="bottom" id="swK-gh-w23"/>
             </constraints>

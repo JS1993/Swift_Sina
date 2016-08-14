@@ -10,11 +10,15 @@ import UIKit
 
 class PublishViewController: UIViewController {
     
+    //MARK :- 属性
     private lazy var publishTitleView : PublishTitleView = PublishTitleView()
     @IBOutlet var publishTextView: JSPlaceHolderTextView!
     @IBOutlet var keyBoardToolBar: UIToolbar!
     
+    @IBOutlet var pictureCollectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var keyBoradToolBarBottomConstraint: NSLayoutConstraint!
+    
+    //MARK :- 系统回掉方法
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,9 +73,22 @@ extension PublishViewController{
             self.view.layoutIfNeeded()
         }
         
-        
-        
-        
+    }
+
+    @IBAction func picturePicker(sender: UIButton) {
+        publishTextView.resignFirstResponder()
+        pictureCollectionViewHeightConstraint.constant = UIScreen.mainScreen().bounds.height*0.65
+        UIView.animateWithDuration(0.5) { 
+            self.view.layoutIfNeeded()
+        }
+    }
+    @IBAction func atAction(sender: UIButton) {
+    }
+    @IBAction func thingAction(sender: UIButton) {
+    }
+    @IBAction func emotionAction(sender: UIButton) {
+    }
+    @IBAction func keyBoardAction(sender: UIButton) {
     }
 }
 
