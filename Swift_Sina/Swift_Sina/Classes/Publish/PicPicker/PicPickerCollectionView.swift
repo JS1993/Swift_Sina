@@ -12,14 +12,18 @@ private let picPickerCellID = "picPickerCellID"
 private let margin : CGFloat = 10
 
 class PicPickerCollectionView: UICollectionView {
-
+    
+    var images : [UIImage] = [UIImage]() {
+        didSet {
+            reloadData()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         dataSource = self
-     
-        registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: picPickerCellID)
+        registerNib(UINib(nibName: "PicPickerCell",bundle: nil), forCellWithReuseIdentifier: picPickerCellID)
         
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         let itemWH = (UIScreen.mainScreen().bounds.width-4*margin)/3
@@ -37,13 +41,27 @@ class PicPickerCollectionView: UICollectionView {
 extension PicPickerCollectionView : UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return images.count + 1
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(picPickerCellID, forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.redColor()
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(picPickerCellID, forIndexPath: indexPath) as! PicPickerCell
+        
+        cell.image = indexPath.item <= images.count-1 ? images[indexPath.item] : nil
         
         return cell
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

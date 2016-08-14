@@ -54,6 +54,8 @@
 		CFDF5D6B1D600705009B1680 /* PublishTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF5D6A1D600705009B1680 /* PublishTitleView.swift */; };
 		CFDF5D6D1D600D26009B1680 /* JSPlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF5D6C1D600D26009B1680 /* JSPlaceHolderTextView.swift */; };
 		CFDF5D7C1D604D7C009B1680 /* PicPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF5D7B1D604D7C009B1680 /* PicPickerCollectionView.swift */; };
+		CFDF5D7F1D6050BD009B1680 /* PicPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF5D7D1D6050BD009B1680 /* PicPickerCell.swift */; };
+		CFDF5D801D6050BD009B1680 /* PicPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDF5D7E1D6050BD009B1680 /* PicPickerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,8 @@
 		CFDF5D6A1D600705009B1680 /* PublishTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTitleView.swift; sourceTree = "<group>"; };
 		CFDF5D6C1D600D26009B1680 /* JSPlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPlaceHolderTextView.swift; sourceTree = "<group>"; };
 		CFDF5D7B1D604D7C009B1680 /* PicPickerCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPickerCollectionView.swift; sourceTree = "<group>"; };
+		CFDF5D7D1D6050BD009B1680 /* PicPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicPickerCell.swift; sourceTree = "<group>"; };
+		CFDF5D7E1D6050BD009B1680 /* PicPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicPickerCell.xib; sourceTree = "<group>"; };
 		F5871772DD31A7D01F81A26F /* Pods-Swift_Sina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sina/Pods-Swift_Sina.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -392,6 +396,8 @@
 			isa = PBXGroup;
 			children = (
 				CFDF5D7B1D604D7C009B1680 /* PicPickerCollectionView.swift */,
+				CFDF5D7D1D6050BD009B1680 /* PicPickerCell.swift */,
+				CFDF5D7E1D6050BD009B1680 /* PicPickerCell.xib */,
 			);
 			path = PicPicker;
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 				CF19AEEC1D5C463B004BF2AD /* WelcomeViewController.xib in Resources */,
 				CFDF5D691D60050E009B1680 /* PublishViewController.xib in Resources */,
 				CF1E9FA81D580E78000E6D56 /* Message.storyboard in Resources */,
+				CFDF5D801D6050BD009B1680 /* PicPickerCell.xib in Resources */,
 				CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */,
 				CF1E9FB01D580F5D000E6D56 /* Discover.storyboard in Resources */,
 				CF1E9FA61D580E56000E6D56 /* Home.storyboard in Resources */,
@@ -599,6 +606,7 @@
 				CF732AF31D5B334E00820F66 /* UserAccount.swift in Sources */,
 				CF19AEEB1D5C463B004BF2AD /* WelcomeViewController.swift in Sources */,
 				CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */,
+				CFDF5D7F1D6050BD009B1680 /* PicPickerCell.swift in Sources */,
 				CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */,
 				CF732AEF1D5B028800820F66 /* Const.swift in Sources */,
 				CF19AEF31D5C958D004BF2AD /* UserModel.swift in Sources */,

@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="keyBoardToolBar" destination="o1O-C0-zec" id="2g8-x1-fUs"/>
                 <outlet property="keyBoradToolBarBottomConstraint" destination="qYP-ku-aTB" id="A5u-6Y-wGY"/>
+                <outlet property="picCollectionView" destination="utO-3x-1my" id="dDw-of-nDz"/>
                 <outlet property="pictureCollectionViewHeightConstraint" destination="WmH-nn-Pco" id="udW-RK-VHB"/>
                 <outlet property="publishTextView" destination="nwa-98-3By" id="PUH-Vn-jVG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,7 +30,7 @@
                 </textView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="utO-3x-1my" customClass="PicPickerCollectionView" customModule="Swift_Sina" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.89670402729999998" green="0.89905490119999998" blue="0.89730955550000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" id="WmH-nn-Pco"/>
                     </constraints>

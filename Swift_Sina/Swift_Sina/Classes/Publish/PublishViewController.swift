@@ -12,8 +12,11 @@ class PublishViewController: UIViewController {
     
     //MARK :- 属性
     private lazy var publishTitleView : PublishTitleView = PublishTitleView()
+    private lazy var images : [UIImage] = [UIImage]()
+    
     @IBOutlet var publishTextView: JSPlaceHolderTextView!
     @IBOutlet var keyBoardToolBar: UIToolbar!
+    @IBOutlet var picCollectionView: PicPickerCollectionView!
     
     @IBOutlet var pictureCollectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var keyBoradToolBarBottomConstraint: NSLayoutConstraint!
@@ -23,7 +26,8 @@ class PublishViewController: UIViewController {
         super.viewDidLoad()
 
         setUpNav()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PublishViewController.keyboardWillChangeFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
+        
+        setUpNoti()
         
     }
 
@@ -49,6 +53,13 @@ extension PublishViewController{
         
         publishTitleView.frame = CGRect(x: 0, y: 0, width: 200, height: 40)
         navigationItem.titleView = publishTitleView
+    }
+    
+    private func setUpNoti(){
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PublishViewController.keyboardWillChangeFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PublishViewController.addPhotoClick), name: "PicPickerNoti", object: nil)
     }
 }
 
@@ -105,10 +116,33 @@ extension PublishViewController : UITextViewDelegate{
 }
 
 
+// MARK: - 添加、删除照片事件
+extension PublishViewController{
+    @objc private func addPhotoClick() {
+        if !UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+            return
+        }
+        
+        let ipc = UIImagePickerController()
+        
+        ipc.sourceType = .PhotoLibrary
+        
+        ipc.delegate = self
+        
+        presentViewController(ipc, animated: true, completion: nil)
+    }
+}
 
-
-
-
+// MARK: -UIImagePicker代理方法
+extension PublishViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        images.append(image)
+        picCollectionView.images = images;
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
 
 
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PicPickerCell" customModule="Swift_Sina" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzd-Js-Ypc">
+                        <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
+                        <state key="normal" backgroundImage="compose_pic_add"/>
+                        <state key="highlighted" backgroundImage="compose_pic_add_highlighted"/>
+                        <connections>
+                            <action selector="addPhotoClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="KRD-On-KZT"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixo-el-59b">
+                        <rect key="frame" x="106" y="0.0" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="I7M-I4-Wt0"/>
+                            <constraint firstAttribute="width" constant="24" id="OLf-wy-fpM"/>
+                        </constraints>
+                        <state key="normal" image="compose_photo_close"/>
+                        <connections>
+                            <action selector="deletePhotoAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="YoL-BO-OYq"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="0.83921568629999999" green="0.84313725490000002" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Vzd-Js-Ypc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1xY-pp-cOx"/>
+                <constraint firstAttribute="trailing" secondItem="Vzd-Js-Ypc" secondAttribute="trailing" id="CXL-VP-Ysf"/>
+                <constraint firstItem="Vzd-Js-Ypc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Usq-CH-tKe"/>
+                <constraint firstItem="Ixo-el-59b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="g1L-uM-553"/>
+                <constraint firstAttribute="trailing" secondItem="Ixo-el-59b" secondAttribute="trailing" id="kpN-QQ-Hgc"/>
+                <constraint firstAttribute="bottom" secondItem="Vzd-Js-Ypc" secondAttribute="bottom" id="th6-hE-af3"/>
+            </constraints>
+            <size key="customSize" width="130" height="120"/>
+            <connections>
+                <outlet property="deletePhotoClick" destination="Ixo-el-59b" id="rb8-eZ-eRg"/>
+                <outlet property="imageBtn" destination="Vzd-Js-Ypc" id="4rm-AH-O0w"/>
+            </connections>
+            <point key="canvasLocation" x="279" y="347"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="compose_photo_close" width="24" height="24"/>
+        <image name="compose_pic_add" width="70" height="70"/>
+        <image name="compose_pic_add_highlighted" width="70" height="70"/>
+    </resources>
+</document>
