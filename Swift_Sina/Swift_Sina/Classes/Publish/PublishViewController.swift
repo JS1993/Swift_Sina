@@ -12,16 +12,24 @@ class PublishViewController: UIViewController {
     
     private lazy var publishTitleView : PublishTitleView = PublishTitleView()
     @IBOutlet var publishTextView: JSPlaceHolderTextView!
+    @IBOutlet var keyBoardToolBar: UIToolbar!
     
+    @IBOutlet var keyBoradToolBarBottomConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpNav()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PublishViewController.keyboardWillChangeFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
+        
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         publishTextView.becomeFirstResponder()
+    }
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
 
@@ -48,6 +56,22 @@ extension PublishViewController{
     
     @objc private func publishAction(){
         print("发布")
+    }
+    
+    @objc private func keyboardWillChangeFrame(note : NSNotification){
+        let duration = note.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
+        let endFrame = (note.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let y = endFrame.origin.y
+        
+        let margin = UIScreen.mainScreen().bounds.height - y
+        keyBoradToolBarBottomConstraint.constant = margin
+        UIView.animateWithDuration(duration) { 
+            self.view.layoutIfNeeded()
+        }
+        
+        
+        
+        
     }
 }
 
