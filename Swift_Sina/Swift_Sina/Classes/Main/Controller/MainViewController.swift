@@ -41,7 +41,10 @@ extension MainViewController{
 //如果在private加上@objc,那么该方法依然会被添加到方法列表当中
 extension MainViewController{
     @objc private func publishAction() {
-        print("点击发布按钮")
+        let publishVC = PublishViewController()
+        let publishNav = UINavigationController(rootViewController: publishVC)
+        presentViewController(publishNav, animated: true, completion: nil)
+        
     }
 }
 
