@@ -60,6 +60,9 @@ extension PublishViewController{
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PublishViewController.keyboardWillChangeFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PublishViewController.addPhotoClick), name: "PicPickerNoti", object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PublishViewController.removePhotoClick(_:)), name: "PicPickerNotiDelete", object: nil)
+        
     }
 }
 
@@ -130,6 +133,21 @@ extension PublishViewController{
         ipc.delegate = self
         
         presentViewController(ipc, animated: true, completion: nil)
+    }
+    
+    @objc private func removePhotoClick(noti : NSNotification) {
+        
+        guard  let image = noti.object as? UIImage else {
+            return
+        }
+        
+        guard let index = images.indexOf(image) else {
+           return
+        }
+        
+        images.removeAtIndex(index)
+        
+        picCollectionView.images = images
     }
 }
 

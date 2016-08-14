@@ -13,17 +13,18 @@ class PicPickerCell: UICollectionViewCell {
     var image : UIImage? {
         didSet{
             if image != nil {
-                imageBtn.setBackgroundImage(image, forState: .Normal)
+                imageV.image = image
                 deletePhotoClick.hidden = false
                 imageBtn.userInteractionEnabled = false
             }else{
-                imageBtn.setBackgroundImage(UIImage(named: "compose_pic_add"), forState: .Normal)
+                imageV.image = nil
                 deletePhotoClick.hidden = true
                 imageBtn.userInteractionEnabled = true
             }
         }
     }
     
+    @IBOutlet var imageV: UIImageView!
     
     @IBOutlet var deletePhotoClick: UIButton!
     @IBOutlet var imageBtn: UIButton!
@@ -38,5 +39,6 @@ class PicPickerCell: UICollectionViewCell {
         
     }
     @IBAction func deletePhotoAction(sender: UIButton) {
+        NSNotificationCenter.defaultCenter().postNotificationName("PicPickerNotiDelete", object: imageV.image)
     }
 }

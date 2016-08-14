@@ -20,6 +20,9 @@
                             <action selector="addPhotoClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="KRD-On-KZT"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7bP-e4-Un2">
+                        <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
+                    </imageView>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixo-el-59b">
                         <rect key="frame" x="106" y="0.0" width="24" height="24"/>
                         <constraints>
@@ -38,15 +41,20 @@
             <constraints>
                 <constraint firstItem="Vzd-Js-Ypc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1xY-pp-cOx"/>
                 <constraint firstAttribute="trailing" secondItem="Vzd-Js-Ypc" secondAttribute="trailing" id="CXL-VP-Ysf"/>
+                <constraint firstAttribute="trailing" secondItem="7bP-e4-Un2" secondAttribute="trailing" id="F3x-e0-wAj"/>
+                <constraint firstItem="7bP-e4-Un2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UTq-kl-BBk"/>
                 <constraint firstItem="Vzd-Js-Ypc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Usq-CH-tKe"/>
+                <constraint firstAttribute="bottom" secondItem="7bP-e4-Un2" secondAttribute="bottom" id="fUC-oa-j7r"/>
                 <constraint firstItem="Ixo-el-59b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="g1L-uM-553"/>
                 <constraint firstAttribute="trailing" secondItem="Ixo-el-59b" secondAttribute="trailing" id="kpN-QQ-Hgc"/>
+                <constraint firstItem="7bP-e4-Un2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="l3M-RM-4eT"/>
                 <constraint firstAttribute="bottom" secondItem="Vzd-Js-Ypc" secondAttribute="bottom" id="th6-hE-af3"/>
             </constraints>
             <size key="customSize" width="130" height="120"/>
             <connections>
                 <outlet property="deletePhotoClick" destination="Ixo-el-59b" id="rb8-eZ-eRg"/>
                 <outlet property="imageBtn" destination="Vzd-Js-Ypc" id="4rm-AH-O0w"/>
+                <outlet property="imageV" destination="7bP-e4-Un2" id="JZY-fG-Z3g"/>
             </connections>
             <point key="canvasLocation" x="279" y="347"/>
         </collectionViewCell>
