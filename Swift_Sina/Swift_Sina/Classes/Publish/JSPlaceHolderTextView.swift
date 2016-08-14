@@ -11,7 +11,7 @@ import SnapKit
 
 class JSPlaceHolderTextView: UITextView {
     
-    private lazy var placeHolderLabel : UILabel = UILabel()
+    lazy var placeHolderLabel : UILabel = UILabel()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,3 +41,15 @@ extension JSPlaceHolderTextView{
         textContainerInset = UIEdgeInsets(top: 8, left: 4, bottom: 8, right: 4)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

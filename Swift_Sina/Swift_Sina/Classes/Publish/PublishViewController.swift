@@ -11,13 +11,18 @@ import UIKit
 class PublishViewController: UIViewController {
     
     private lazy var publishTitleView : PublishTitleView = PublishTitleView()
-
+    @IBOutlet var publishTextView: JSPlaceHolderTextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpNav()
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        publishTextView.becomeFirstResponder()
+    }
     
 
 }
@@ -45,3 +50,37 @@ extension PublishViewController{
         print("发布")
     }
 }
+
+// MARK: - textView代理方法
+extension PublishViewController : UITextViewDelegate{
+    func textViewDidChange(textView: UITextView) {
+        publishTextView.placeHolderLabel.hidden = textView.hasText()
+        navigationItem.rightBarButtonItem?.enabled = textView.hasText()
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        publishTextView.resignFirstResponder()
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
