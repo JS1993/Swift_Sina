@@ -101,9 +101,12 @@ extension PublishViewController{
     @IBAction func thingAction(sender: UIButton) {
     }
     @IBAction func emotionAction(sender: UIButton) {
+        publishTextView.resignFirstResponder()
+        publishTextView.inputView = publishTextView.inputView != nil ? nil : UISwitch()
+        publishTextView.becomeFirstResponder()
     }
     @IBAction func keyBoardAction(sender: UIButton) {
-    }
+    } 
 }
 
 // MARK: - textView代理方法
