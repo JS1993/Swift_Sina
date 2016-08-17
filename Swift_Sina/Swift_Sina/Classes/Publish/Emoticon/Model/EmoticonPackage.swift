@@ -1,8 +1,7 @@
 //
-//  PublishTitleView.swift
 //  Swift_Sina
 //
-//  Created by  江苏 on 16/8/14.
+//  Created by  江苏 on 16/8/17.
 //  Copyright © 2016年 Hunter. All rights reserved.
 //
 
@@ -35,7 +34,7 @@ class EmoticonPackage: NSObject {
             }
             
             emoticons.append(Emoticon(dict: dict))
-            index += 1
+            index++
             
             if index == 20 {
                 // 添加删除表情
