@@ -102,3 +102,44 @@ extension JSNetWorkingTools{
         }
     }
 }
+
+
+// MARK:- 发送微博
+extension JSNetWorkingTools {
+    
+    func sendStatus(statusText : String, isSuccess : (isSuccess : Bool) -> () ){
+        // 1.获取请求的URLString
+        let urlString = "https://api.weibo.com/2/statuses/update.json"
+        
+        // 2.获取请求的参数
+        let parameters = ["access_token" : (UserAccountViewModel.shareIntance.account?.access_token)!, "status" : statusText]
+        
+        // 3.发送网络请求
+        request(.POST, urlString: urlString, parameters: parameters) { (result, error) -> () in
+            if result != nil {
+                isSuccess(isSuccess: true)
+            } else {
+                isSuccess(isSuccess: false)
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

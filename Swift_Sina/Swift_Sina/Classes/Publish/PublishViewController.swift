@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class PublishViewController: UIViewController {
     
     //MARK :- 属性
+   
     private lazy var publishTitleView : PublishTitleView = PublishTitleView()
     private lazy var images : [UIImage] = [UIImage]()
     
     @IBOutlet var publishTextView: JSPlaceHolderTextView!
     @IBOutlet var keyBoardToolBar: UIToolbar!
     @IBOutlet var picCollectionView: PicPickerCollectionView!
+    
+    private lazy var emotionVC : EmoticonController = EmoticonController { (emoticon) in
+        self.publishTextView.insertEmoticon(emoticon)
+        self.textViewDidChange(self.publishTextView)
+    }
     
     @IBOutlet var pictureCollectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var keyBoradToolBarBottomConstraint: NSLayoutConstraint!
@@ -73,7 +80,16 @@ extension PublishViewController{
     }
     
     @objc private func publishAction(){
-        print("发布")
+        let statusStr = publishTextView.getEmoticonString()
+        JSNetWorkingTools.shareInstance.sendStatus(statusStr) { (isSuccess) in
+            if !isSuccess {
+                SVProgressHUD.showErrorWithStatus("发送微博失败")
+            }else{
+                
+                SVProgressHUD.showSuccessWithStatus("发送微博成功")
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
     }
     
     @objc private func keyboardWillChangeFrame(note : NSNotification){
@@ -102,10 +118,13 @@ extension PublishViewController{
     }
     @IBAction func emotionAction(sender: UIButton) {
         publishTextView.resignFirstResponder()
-        publishTextView.inputView = publishTextView.inputView != nil ? nil : UISwitch()
+        publishTextView.inputView = publishTextView.inputView != nil ? nil : emotionVC.view
         publishTextView.becomeFirstResponder()
     }
     @IBAction func keyBoardAction(sender: UIButton) {
+        publishTextView.resignFirstResponder()
+        publishTextView.inputView =  nil
+        publishTextView.becomeFirstResponder()
     } 
 }
 

@@ -132,7 +132,7 @@
 		CF732AEA1D5AFECD00820F66 /* QAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAuthViewController.swift; sourceTree = "<group>"; };
 		CF732AEB1D5AFECD00820F66 /* QAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QAuthViewController.xib; sourceTree = "<group>"; };
 		CF732AEE1D5B028800820F66 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSNetWorkingTools.swift; sourceTree = "<group>"; };
+		CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSNetWorkingTools.swift; path = Category/JSNetWorkingTools.swift; sourceTree = "<group>"; };
 		CF732AF21D5B334E00820F66 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		CFC791811D6460FB00EEE2E5 /* EmioticonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmioticonViewCell.swift; sourceTree = "<group>"; };
 		CFC791821D6460FB00EEE2E5 /* EmoticonAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonAttachment.swift; sourceTree = "<group>"; };
@@ -218,8 +218,9 @@
 		CF1E9FB31D5821B5000E6D56 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				CF1E9FB41D5821B5000E6D56 /* Category */,
 				CF732AEE1D5B028800820F66 /* Const.swift */,
+				CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */,
+				CF1E9FB41D5821B5000E6D56 /* Category */,
 			);
 			name = Tools;
 			path = Publish/Tools;
@@ -230,7 +231,6 @@
 			children = (
 				CF1E9FB51D582248000E6D56 /* UIButton-JSExtension.swift */,
 				CF1E9FC11D58830B000E6D56 /* UIBarButtonItem-JSExtension.swift */,
-				CF732AF01D5B2F4A00820F66 /* JSNetWorkingTools.swift */,
 				CF19AEF01D5C92FB004BF2AD /* NSDate-JSExtension.swift */,
 			);
 			path = Category;
