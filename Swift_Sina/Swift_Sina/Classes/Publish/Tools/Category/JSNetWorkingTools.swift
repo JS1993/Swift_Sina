@@ -123,10 +123,28 @@ extension JSNetWorkingTools {
             }
         }
     }
+    
+    func sendStatusWithImage(statusText : String,image: UIImage, isSuccess : (isSuccess : Bool) -> () ){
+        // 1.获取请求的URLString
+        let urlString = "https://api.weibo.com/2/statuses/upload.json"
+        
+        // 2.获取请求的参数
+        let parameters = ["access_token" : (UserAccountViewModel.shareIntance.account?.access_token)!, "status" : statusText]
+        
+        POST(urlString, parameters: parameters, constructingBodyWithBlock: { (formData) in
+            
+            if let imageData = UIImageJPEGRepresentation(image, 0.5) {
+                formData.appendPartWithFileData(imageData , name : "pic" ,fileName:"123.png",mimeType : "image/png")
+            }
+            
+            
+            }, success: { (_, _) in
+                isSuccess(isSuccess: true)
+            }) { (_, error) in
+                isSuccess(isSuccess: false)
+        }
+    }
 }
-
-
-
 
 
 

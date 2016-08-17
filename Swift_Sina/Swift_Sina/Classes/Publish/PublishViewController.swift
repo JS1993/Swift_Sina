@@ -81,7 +81,8 @@ extension PublishViewController{
     
     @objc private func publishAction(){
         let statusStr = publishTextView.getEmoticonString()
-        JSNetWorkingTools.shareInstance.sendStatus(statusStr) { (isSuccess) in
+        
+        let finishCallBack = {(isSuccess : Bool) -> () in
             if !isSuccess {
                 SVProgressHUD.showErrorWithStatus("发送微博失败")
             }else{
@@ -89,7 +90,16 @@ extension PublishViewController{
                 SVProgressHUD.showSuccessWithStatus("发送微博成功")
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
+            
         }
+        
+        if let statusImage = images.first {
+            
+            JSNetWorkingTools.shareInstance.sendStatusWithImage(statusStr, image: statusImage, isSuccess:finishCallBack)
+        }else{
+            JSNetWorkingTools.shareInstance.sendStatus(statusStr, isSuccess: finishCallBack)
+        }
+       
     }
     
     @objc private func keyboardWillChangeFrame(note : NSNotification){
