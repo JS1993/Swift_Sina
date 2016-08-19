@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-private let PhotoBrowserCell = "PhotoBrowserCell"
+private let PhotoBrowserCellID = "PhotoBrowserCell"
 
 class PhotoBrowserViewController: UIViewController {
     
@@ -17,7 +17,7 @@ class PhotoBrowserViewController: UIViewController {
     var picUrls : [NSURL]
     
     
-    private lazy var collectionView : UICollectionView = UICollectionView(frame:CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
+    private lazy var collectionView : UICollectionView = UICollectionView(frame:CGRectZero, collectionViewLayout: PhotoBrowserColletionViewLayout())
     private lazy var closeBtn : UIButton = UIButton()
     private lazy var saveBtn : UIButton = UIButton()
     
@@ -48,7 +48,7 @@ extension PhotoBrowserViewController{
         view.addSubview(saveBtn)
         
         collectionView.frame = view.bounds
-        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: PhotoBrowserCell)
+        collectionView.registerClass(PhotoBrowserCell.self, forCellWithReuseIdentifier: PhotoBrowserCellID)
         
         collectionView.dataSource = self
         
@@ -59,12 +59,14 @@ extension PhotoBrowserViewController{
             make.bottom.equalTo(-20)
             make.size.equalTo(CGSize(width: 90, height: 32))
         }
+        closeBtn.addTarget(self, action: #selector(PhotoBrowserViewController.closeBtnClicked), forControlEvents: .TouchUpInside)
         
         saveBtn.snp_makeConstraints { (make) in
             make.right.equalTo(-20)
             make.bottom.equalTo(closeBtn)
             make.size.equalTo(closeBtn.snp_size)
         }
+        saveBtn.addTarget(self, action: #selector(PhotoBrowserViewController.saveBtnClicked), forControlEvents: .TouchUpInside)
         
         closeBtn.setTitle("关 闭", forState: .Normal)
         saveBtn.setTitle("保 存", forState: .Normal)
@@ -73,14 +75,27 @@ extension PhotoBrowserViewController{
     }
 }
 
+extension PhotoBrowserViewController{
+    @objc private func closeBtnClicked(){
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @objc private func saveBtnClicked(){
+        
+    }
+    
+}
 
 extension PhotoBrowserViewController : UICollectionViewDataSource{
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
         return picUrls.count
+        
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PhotoBrowserCell, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PhotoBrowserCellID, forIndexPath: indexPath) as! PhotoBrowserCell
+        cell.picURL = picUrls[indexPath.item]
         return cell
     }
 }
