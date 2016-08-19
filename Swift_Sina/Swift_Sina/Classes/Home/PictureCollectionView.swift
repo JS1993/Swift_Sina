@@ -19,8 +19,8 @@ class PictureCollectionView: UICollectionView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        dataSource=self
-        
+        dataSource = self
+        delegate = self
     }
 
 
@@ -38,6 +38,14 @@ extension PictureCollectionView : UICollectionViewDataSource{
         return cell
     }
     
+}
+
+extension PictureCollectionView : UICollectionViewDelegate{
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let userInfo = ["indexPath" : indexPath , "picUrls" : picUrls]
+        NSNotificationCenter.defaultCenter().postNotificationName(ShowPhotoBrowserNote, object: nil, userInfo: userInfo)
+        
+    }
 }
 
 class PicCollectionViewCell: UICollectionViewCell {

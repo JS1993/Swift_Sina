@@ -36,6 +36,8 @@ class HomeViewController: BaseViewController {
         
         setUpTipLabel()
         
+        setUpNoti()
+        
         tableView.rowHeight=UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
     }
@@ -78,6 +80,20 @@ extension HomeViewController{
         tipLabel.font=UIFont.systemFontOfSize(14.0)
         tipLabel.textAlignment = .Center
         tipLabel.hidden = true
+    }
+    
+    private func setUpNoti(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(HomeViewController.showPhotoBrowserNote(_:)), name:ShowPhotoBrowserNote, object: nil)
+    }
+}
+
+// MARK: - 接收点击图片的通知方法
+extension HomeViewController{
+    @objc private func showPhotoBrowserNote(noti : NSNotification){
+        let index = noti.userInfo!["indexPath"] as! NSIndexPath
+        let urls = noti.userInfo!["picUrls"] as! [NSURL]
+        let photoBrowserVC = PhotoBrowserViewController(indexPath: index, picUrls: urls)
+        presentViewController(photoBrowserVC, animated: true, completion: nil)    
     }
 }
 

@@ -41,6 +41,7 @@
 		CF40911B1D5734C700D4FCC2 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */; };
 		CF40911D1D5734D600D4FCC2 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */; };
 		CF40911F1D5734E100D4FCC2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */; };
+		CF4210FE1D669BD400941FA5 /* PhotoBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4210FD1D669BD400941FA5 /* PhotoBrowserViewController.swift */; };
 		CF602B081D5D5E2A002B0D3C /* PictureCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF602B071D5D5E2A002B0D3C /* PictureCollectionView.swift */; };
 		CF732AE61D5AAF8700820F66 /* JSPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AE51D5AAF8700820F66 /* JSPresentationController.swift */; };
 		CF732AE81D5ABE4300820F66 /* JSPopoverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF732AE71D5ABE4300820F66 /* JSPopoverAnimation.swift */; };
@@ -126,6 +127,7 @@
 		CF40911A1D5734C700D4FCC2 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Controller/MessageViewController.swift; sourceTree = "<group>"; };
 		CF40911C1D5734D600D4FCC2 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverViewController.swift; path = Controller/DiscoverViewController.swift; sourceTree = "<group>"; };
 		CF40911E1D5734E100D4FCC2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controller/ProfileViewController.swift; sourceTree = "<group>"; };
+		CF4210FD1D669BD400941FA5 /* PhotoBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserViewController.swift; sourceTree = "<group>"; };
 		CF602B071D5D5E2A002B0D3C /* PictureCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCollectionView.swift; sourceTree = "<group>"; };
 		CF732AE51D5AAF8700820F66 /* JSPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPresentationController.swift; sourceTree = "<group>"; };
 		CF732AE71D5ABE4300820F66 /* JSPopoverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPopoverAnimation.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 		CF4090FB1D5720C900D4FCC2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CF4210FC1D669B7600941FA5 /* PhotoBrowser */,
 				CF19AEED1D5C6B92004BF2AD /* HomeModel */,
 				CF1E9FC71D588B83000E6D56 /* UIPopover */,
 				CF1E9FA41D580E56000E6D56 /* Home.storyboard */,
@@ -398,6 +401,14 @@
 				CFDF5D6C1D600D26009B1680 /* JSPlaceHolderTextView.swift */,
 			);
 			path = Publish;
+			sourceTree = "<group>";
+		};
+		CF4210FC1D669B7600941FA5 /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				CF4210FD1D669BD400941FA5 /* PhotoBrowserViewController.swift */,
+			);
+			path = PhotoBrowser;
 			sourceTree = "<group>";
 		};
 		CF732AE91D5AFEB700820F66 /* QAuth */ = {
@@ -679,6 +690,7 @@
 				CF19AEF71D5CA254004BF2AD /* HomeViewCell.swift in Sources */,
 				CF19AEF51D5C9A58004BF2AD /* StatusViewModel.swift in Sources */,
 				CF1E9FB61D582248000E6D56 /* UIButton-JSExtension.swift in Sources */,
+				CF4210FE1D669BD400941FA5 /* PhotoBrowserViewController.swift in Sources */,
 				CF732AE61D5AAF8700820F66 /* JSPresentationController.swift in Sources */,
 				CFC7918C1D6460FB00EEE2E5 /* EmoticonAttachment.swift in Sources */,
 				CF40911B1D5734C700D4FCC2 /* MessageViewController.swift in Sources */,

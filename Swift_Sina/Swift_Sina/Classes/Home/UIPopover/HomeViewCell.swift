@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import HYLabel
 
 private let edgeMargin : CGFloat = 15
 private let itemMargin : CGFloat = 10
@@ -23,12 +24,12 @@ class HomeViewCell: UITableViewCell {
     @IBOutlet var iconImageV: UIImageView!
     @IBOutlet var verifiedImageV: UIImageView!
     @IBOutlet var vipImageV: UIImageView!
-    @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var contentLabel: HYLabel!
     @IBOutlet var createAtLabel: UILabel!
     @IBOutlet var sourceLabel: UILabel!
     @IBOutlet var screenNameLabel: UILabel!
     @IBOutlet var pictureCollectionView: PictureCollectionView!
-    @IBOutlet var reweetedContentLabel: UILabel!
+    @IBOutlet var reweetedContentLabel: HYLabel!
     @IBOutlet var bgView: UIView!
     var  viewModel : StatusViewModel? {
         didSet {
@@ -42,7 +43,7 @@ class HomeViewCell: UITableViewCell {
             screenNameLabel.text=viewModel.status?.user?.screen_name
             createAtLabel.text=viewModel.creatAtText
             sourceLabel.text=viewModel.sourceText
-            contentLabel.text=viewModel.status?.text
+            contentLabel.attributedText = FindEmoticon.shareIntance.findAttrString(viewModel.status?.text, font: contentLabel.font)
             screenNameLabel.textColor = viewModel.mbrankImage == nil ? UIColor.blueColor() : UIColor.orangeColor()
             //计算pictureView约束
             let pictureViewSize = calclulatePicViewSize(viewModel.picUrls.count)
@@ -53,7 +54,7 @@ class HomeViewCell: UITableViewCell {
             if viewModel.status?.retweeted_status != nil {
                 if let screen_name = viewModel.status?.retweeted_status?.user?.screen_name,
                     let reweetedText = viewModel.status?.retweeted_status?.text{
-                    reweetedContentLabel.text = "@"+"\(screen_name) : "+reweetedText;
+                    reweetedContentLabel.attributedText = FindEmoticon.shareIntance.findAttrString("@"+"\(screen_name) : "+reweetedText, font: reweetedContentLabel.font)
                     bgView.hidden=false;
                     contentLabelTopConstraint.constant = 15
                 }
@@ -69,6 +70,9 @@ class HomeViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         contentTextWidthConstraint.constant = UIScreen.mainScreen().bounds.width - 2*edgeMargin
+        contentLabel.matchTextColor = UIColor .blueColor()
+        reweetedContentLabel.matchTextColor = UIColor.blueColor()
+        
         
     }
 

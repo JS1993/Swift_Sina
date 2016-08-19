@@ -18,6 +18,8 @@ let code = "12e012bb366b0a3af87cf5329c78779a"
 
 let PicPickerNoti = "PicPickerNoti"
 
+let ShowPhotoBrowserNote = "showPhotoBrowserNote"
+
 
 
 
