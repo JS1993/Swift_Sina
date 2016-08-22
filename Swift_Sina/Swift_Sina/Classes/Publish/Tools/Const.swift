@@ -20,7 +20,9 @@ let PicPickerNoti = "PicPickerNoti"
 
 let ShowPhotoBrowserNote = "showPhotoBrowserNote"
 
+let phoneNum = "18175022900"
 
+let password = "123456"
 
 
 
