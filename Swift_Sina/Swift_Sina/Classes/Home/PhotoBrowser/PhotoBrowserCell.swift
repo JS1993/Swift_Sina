@@ -9,6 +9,10 @@
 import UIKit
 import SDWebImage
 
+protocol PhotoBrowserCellDelegate : NSObjectProtocol  {
+    func imageViewClick()
+}
+
 class PhotoBrowserCell: UICollectionViewCell {
     
     var picURL : NSURL? {
@@ -22,7 +26,9 @@ class PhotoBrowserCell: UICollectionViewCell {
     }
     private lazy var progressView : JSProgressView = JSProgressView()
     private lazy var scrollView : UIScrollView =  UIScrollView()
-    private lazy var imageV : UIImageView = UIImageView()
+    lazy var imageV : UIImageView = UIImageView()
+    
+    var delegate : PhotoBrowserCellDelegate?
     
     //MARK :-构造函数
     override init(frame: CGRect) {
@@ -51,6 +57,17 @@ extension PhotoBrowserCell{
         
         scrollView.frame = contentView.bounds
         scrollView.frame.size.width -= 20
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(PhotoBrowserCell.imageViewClick))
+        imageV.addGestureRecognizer(tap)
+        imageV.userInteractionEnabled = true
+        
+    }
+}
+
+extension PhotoBrowserCell{
+    @objc private func imageViewClick(){
+        delegate?.imageViewClick()
     }
 }
 

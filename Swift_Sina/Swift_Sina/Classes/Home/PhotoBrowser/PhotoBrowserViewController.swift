@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import SVProgressHUD
 
 private let PhotoBrowserCellID = "PhotoBrowserCell"
 
@@ -55,7 +56,6 @@ extension PhotoBrowserViewController{
         
         collectionView.frame = view.bounds
         collectionView.registerClass(PhotoBrowserCell.self, forCellWithReuseIdentifier: PhotoBrowserCellID)
-        
         collectionView.dataSource = self
         
         
@@ -87,9 +87,27 @@ extension PhotoBrowserViewController{
     }
     
     @objc private func saveBtnClicked(){
+       let cell = collectionView.visibleCells().first as! PhotoBrowserCell
+        guard let image = cell.imageV.image else{
+            return
+        }
         
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(PhotoBrowserViewController.image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
+    
+    @objc private func image(image : UIImage , didFinishSavingWithError error : NSError? , contextInfo : AnyObject){
+        var showInfo = ""
+        
+        if error != nil {
+            showInfo = "保存失败"
+        }else{
+            showInfo = "保存成功"
+        }
+        
+        SVProgressHUD.showInfoWithStatus(showInfo)
+        
+    }
 }
 
 extension PhotoBrowserViewController : UICollectionViewDataSource{
@@ -102,7 +120,16 @@ extension PhotoBrowserViewController : UICollectionViewDataSource{
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PhotoBrowserCellID, forIndexPath: indexPath) as! PhotoBrowserCell
         cell.picURL = picUrls[indexPath.item]
+        cell.delegate = self
         return cell
+    }
+    
+    
+}
+
+extension PhotoBrowserViewController : PhotoBrowserCellDelegate{
+    func imageViewClick() {
+        closeBtnClicked()
     }
 }
 
