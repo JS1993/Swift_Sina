@@ -14,10 +14,16 @@ protocol AnimatorPresentedDelegate : NSObjectProtocol {
     func imageView(indexPath : NSIndexPath) -> UIImageView
 }
 
+protocol AnimatorDismissDelegate : NSObjectProtocol {
+    func indexPathForDismissView() -> NSIndexPath
+    func imageView() -> UIImageView
+}
+
 class PhotoBrowserAnimator: NSObject {
     
     var isPresented : Bool = false
     var presentedDelegate : AnimatorPresentedDelegate?
+    var dismissDelegate : AnimatorDismissDelegate?
     var indexPath : NSIndexPath?    
     
 }
@@ -73,17 +79,22 @@ extension PhotoBrowserAnimator : UIViewControllerAnimatedTransitioning{
     }
     
     func animationForDismissView(transitionContext: UIViewControllerContextTransitioning) {
+        
+        guard let dismissDelegate = dismissDelegate , presentedDelegate = presentedDelegate else {
+            return
+        }
+        
         let dissmissView = transitionContext.viewForKey(UITransitionContextFromViewKey)
+        dissmissView?.removeFromSuperview()
         
-        transitionContext.containerView()?.addSubview(dissmissView!)
-        
-        dissmissView?.alpha = 1.0
+        let imageView = dismissDelegate.imageView()
+        transitionContext.containerView()?.addSubview(imageView)
+        let indexPath = dismissDelegate.indexPathForDismissView()
         
         UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
-            dissmissView?.alpha = 0.0
+            imageView.frame = presentedDelegate.startRect(indexPath)
         }) { (_) in
             
-            dissmissView?.removeFromSuperview()
             transitionContext.completeTransition(true)
         }
     }

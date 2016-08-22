@@ -100,6 +100,7 @@ extension HomeViewController{
         photoBrowserVC.transitioningDelegate = photoBrowserAnimator
         photoBrowserAnimator.presentedDelegate = object
         photoBrowserAnimator.indexPath = index
+        photoBrowserAnimator.dismissDelegate = photoBrowserVC
         presentViewController(photoBrowserVC, animated: true, completion: nil)    
     }
 }
