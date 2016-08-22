@@ -53,7 +53,7 @@ extension QAuthViewController{
     @objc private func fillBtnClicked(){
         
         //1.书写js代码
-        let jscode="document.getElementById('userId').value='18175022904';document.getElementById('passwd').value='123456JS@';"
+        let jscode="document.getElementById('userId').value='18175022900';document.getElementById('passwd').value='123456';"
         
         //2.执行js代码
         webView.stringByEvaluatingJavaScriptFromString(jscode)

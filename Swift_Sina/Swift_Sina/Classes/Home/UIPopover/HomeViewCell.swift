@@ -41,8 +41,13 @@ class HomeViewCell: UITableViewCell {
             verifiedImageV.image=viewModel.verifiedImage
             vipImageV.image=viewModel.mbrankImage
             screenNameLabel.text=viewModel.status?.user?.screen_name
+            let screenName = viewModel.status?.user?.screen_name
+            if screenName == "苏_JS" {
+                sourceLabel.text="来自 iPhone 7 Plus"
+            }else{
+                sourceLabel.text=viewModel.sourceText
+            }
             createAtLabel.text=viewModel.creatAtText
-            sourceLabel.text=viewModel.sourceText
             contentLabel.attributedText = FindEmoticon.shareIntance.findAttrString(viewModel.status?.text, font: contentLabel.font)
             screenNameLabel.textColor = viewModel.mbrankImage == nil ? UIColor.blueColor() : UIColor.orangeColor()
             //计算pictureView约束
