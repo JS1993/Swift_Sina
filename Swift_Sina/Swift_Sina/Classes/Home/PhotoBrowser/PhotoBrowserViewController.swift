@@ -33,9 +33,15 @@ class PhotoBrowserViewController: UIViewController {
     }
 
 
+    override func loadView() {
+        super.loadView()
+        view.bounds.size.width += 20
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        
+        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .Left, animated: false)
     }
 
 }

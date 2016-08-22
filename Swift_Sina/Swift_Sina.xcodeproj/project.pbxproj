@@ -29,6 +29,7 @@
 		CF1E9FC61D588713000E6D56 /* JSRightImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9FC51D588713000E6D56 /* JSRightImageButton.swift */; };
 		CF1E9FCA1D588BA3000E6D56 /* JSPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9FC81D588BA3000E6D56 /* JSPopoverViewController.swift */; };
 		CF1E9FCB1D588BA3000E6D56 /* JSPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FC91D588BA3000E6D56 /* JSPopoverViewController.xib */; };
+		CF3E235B1D6A8F7F00DB5B91 /* JSProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E235A1D6A8F7F00DB5B91 /* JSProgressView.swift */; };
 		CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */; };
 		CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4090C61D56DA4000D4FCC2 /* Main.storyboard */; };
 		CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C91D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld */; };
@@ -110,6 +111,7 @@
 		CF1E9FC51D588713000E6D56 /* JSRightImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSRightImageButton.swift; sourceTree = "<group>"; };
 		CF1E9FC81D588BA3000E6D56 /* JSPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPopoverViewController.swift; sourceTree = "<group>"; };
 		CF1E9FC91D588BA3000E6D56 /* JSPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPopoverViewController.xib; sourceTree = "<group>"; };
+		CF3E235A1D6A8F7F00DB5B91 /* JSProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSProgressView.swift; sourceTree = "<group>"; };
 		CF4090BF1D56DA4000D4FCC2 /* Swift_Sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4090C71D56DA4000D4FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 			children = (
 				CF4210FD1D669BD400941FA5 /* PhotoBrowserViewController.swift */,
 				CF4210FF1D66A31E00941FA5 /* PhotoBrowserCell.swift */,
+				CF3E235A1D6A8F7F00DB5B91 /* JSProgressView.swift */,
 			);
 			path = PhotoBrowser;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				CF4091101D572C4100D4FCC2 /* MainViewController.swift in Sources */,
 				CFC791901D6460FB00EEE2E5 /* Emoticon.swift in Sources */,
 				CF1E9FC61D588713000E6D56 /* JSRightImageButton.swift in Sources */,
+				CF3E235B1D6A8F7F00DB5B91 /* JSProgressView.swift in Sources */,
 				CF732AE81D5ABE4300820F66 /* JSPopoverAnimation.swift in Sources */,
 				CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */,
 				CF732AF31D5B334E00820F66 /* UserAccount.swift in Sources */,
