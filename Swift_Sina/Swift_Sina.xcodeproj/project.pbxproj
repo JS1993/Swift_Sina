@@ -30,6 +30,7 @@
 		CF1E9FCA1D588BA3000E6D56 /* JSPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E9FC81D588BA3000E6D56 /* JSPopoverViewController.swift */; };
 		CF1E9FCB1D588BA3000E6D56 /* JSPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1E9FC91D588BA3000E6D56 /* JSPopoverViewController.xib */; };
 		CF3E235B1D6A8F7F00DB5B91 /* JSProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E235A1D6A8F7F00DB5B91 /* JSProgressView.swift */; };
+		CF3E235D1D6A9C9F00DB5B91 /* PhotoBrowserAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3E235C1D6A9C9F00DB5B91 /* PhotoBrowserAnimator.swift */; };
 		CF4090C31D56DA4000D4FCC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */; };
 		CF4090C81D56DA4000D4FCC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4090C61D56DA4000D4FCC2 /* Main.storyboard */; };
 		CF4090CB1D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4090C91D56DA4000D4FCC2 /* Swift_Sina.xcdatamodeld */; };
@@ -112,6 +113,7 @@
 		CF1E9FC81D588BA3000E6D56 /* JSPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSPopoverViewController.swift; sourceTree = "<group>"; };
 		CF1E9FC91D588BA3000E6D56 /* JSPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPopoverViewController.xib; sourceTree = "<group>"; };
 		CF3E235A1D6A8F7F00DB5B91 /* JSProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSProgressView.swift; sourceTree = "<group>"; };
+		CF3E235C1D6A9C9F00DB5B91 /* PhotoBrowserAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserAnimator.swift; sourceTree = "<group>"; };
 		CF4090BF1D56DA4000D4FCC2 /* Swift_Sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4090C21D56DA4000D4FCC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF4090C71D56DA4000D4FCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				CF4210FD1D669BD400941FA5 /* PhotoBrowserViewController.swift */,
 				CF4210FF1D66A31E00941FA5 /* PhotoBrowserCell.swift */,
 				CF3E235A1D6A8F7F00DB5B91 /* JSProgressView.swift */,
+				CF3E235C1D6A9C9F00DB5B91 /* PhotoBrowserAnimator.swift */,
 			);
 			path = PhotoBrowser;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				CFDF5D681D60050E009B1680 /* PublishViewController.swift in Sources */,
 				CFDF5D7C1D604D7C009B1680 /* PicPickerCollectionView.swift in Sources */,
 				CFDF5D6B1D600705009B1680 /* PublishTitleView.swift in Sources */,
+				CF3E235D1D6A9C9F00DB5B91 /* PhotoBrowserAnimator.swift in Sources */,
 				CF4211011D66A31E00941FA5 /* PhotoBrowserCell.swift in Sources */,
 				CF19AEF11D5C92FB004BF2AD /* NSDate-JSExtension.swift in Sources */,
 				CF602B081D5D5E2A002B0D3C /* PictureCollectionView.swift in Sources */,

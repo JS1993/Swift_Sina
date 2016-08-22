@@ -19,6 +19,8 @@ class HomeViewController: BaseViewController {
     
     private lazy var tipLabel : UILabel = UILabel()
     
+    private lazy var photoBrowserAnimator : PhotoBrowserAnimator = PhotoBrowserAnimator()
+    
     //注意：在闭包或者函数中出现歧义，使用当前对象的属性或者调用方法，需要加self
     private lazy var popoverAnimation:JSPopoverAnimation = JSPopoverAnimation {[weak self] (isPresented) in
         
@@ -92,7 +94,12 @@ extension HomeViewController{
     @objc private func showPhotoBrowserNote(noti : NSNotification){
         let index = noti.userInfo!["indexPath"] as! NSIndexPath
         let urls = noti.userInfo!["picUrls"] as! [NSURL]
+        let object = noti.object as! PictureCollectionView
         let photoBrowserVC = PhotoBrowserViewController(indexPath: index, picUrls: urls)
+        photoBrowserVC.modalPresentationStyle = .Custom
+        photoBrowserVC.transitioningDelegate = photoBrowserAnimator
+        photoBrowserAnimator.presentedDelegate = object
+        photoBrowserAnimator.indexPath = index
         presentViewController(photoBrowserVC, animated: true, completion: nil)    
     }
 }

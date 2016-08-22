@@ -36,7 +36,7 @@ class PhotoBrowserViewController: UIViewController {
 
     override func loadView() {
         super.loadView()
-        view.bounds.size.width += 20
+        view.frame.size.width += 20
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +68,7 @@ extension PhotoBrowserViewController{
         closeBtn.addTarget(self, action: #selector(PhotoBrowserViewController.closeBtnClicked), forControlEvents: .TouchUpInside)
         
         saveBtn.snp_makeConstraints { (make) in
-            make.right.equalTo(-20)
+            make.right.equalTo(-40)
             make.bottom.equalTo(closeBtn)
             make.size.equalTo(closeBtn.snp_size)
         }
